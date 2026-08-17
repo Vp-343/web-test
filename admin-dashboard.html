@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portal - Dashboard</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        headline: ['Unbounded', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1E2A38',
+                        secondary: '#4F9DA6',
+                        background: '#FAF9F6',
+                        'border-light': '#EAE8E4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #CBD5E1;
+        }
+    </style>
+</head>
+<body class="bg-background font-body min-h-screen text-primary flex flex-col hidden" id="dashboard-body">
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-border-light sticky top-0 z-40">
+        <div class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-lg font-bold text-primary hidden sm:inline">Ishita's Dental</span>
+                <span class="text-xs bg-secondary/15 text-secondary px-3 py-1 rounded-full font-bold uppercase tracking-wider">Admin Portal</span>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <!-- User Profile Info -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-secondary text-white font-headline flex items-center justify-center font-bold text-sm">
+                        DI
+                    </div>
+                    <div class="hidden md:block text-left">
+                        <h4 class="text-sm font-bold leading-tight" id="user-email">Dr. Ishita</h4>
+                        <p class="text-xs text-slate-400">Clinic Administrator</p>
+                    </div>
+                </div>
+                <!-- Logout Trigger -->
+                <button id="logout-btn" class="flex items-center gap-2 text-sm text-red-500 font-bold hover:text-red-700 transition-colors">
+                    <span class="material-symbols-outlined text-sm">logout</span> Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-6 py-10 w-full flex-grow flex flex-col gap-10">
+        <!-- Title bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+                <h1 class="font-headline text-2xl md:text-3xl font-bold">Appointment Bookings</h1>
+                <p class="text-on-surface-variant text-sm mt-1">Review and manage patient booking requests in real-time.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <button onclick="showDeleteAllModal()" class="w-full sm:w-auto border border-red-200 hover:border-red-500 text-red-500 hover:bg-red-50 px-6 py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                    <span class="material-symbols-outlined text-sm">delete_sweep</span> Delete All Bookings
+                </button>
+                <button onclick="fetchBookings()" class="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 transition-colors">
+                    <span class="material-symbols-outlined text-sm">refresh</span> Refresh List
+                </button>
+            </div>
+        </div>
+
+        <!-- Dashboard Stats Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Stat 1: Total Bookings -->
+            <div class="bg-white border border-border-light/80 p-6 rounded-[24px] shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 text-slate-600 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-2xl">calendar_month</span>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest">Total Bookings</h3>
+                    <p class="text-3xl font-bold font-headline mt-1 text-slate-800" id="stat-total">0</p>
+                </div>
+            </div>
+            <!-- Stat 2: Today's Bookings -->
+            <div class="bg-white border border-border-light/80 p-6 rounded-[24px] shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-2xl">pending_actions</span>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest">Today's Bookings</h3>
+                    <p class="text-3xl font-bold font-headline mt-1 text-slate-800" id="stat-today">0</p>
+                </div>
+            </div>
+            <!-- Stat 3: Morning Slots -->
+            <div class="bg-white border border-border-light/80 p-6 rounded-[24px] shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-2xl">wb_twilight</span>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest">Morning Slots</h3>
+                    <p class="text-3xl font-bold font-headline mt-1 text-slate-800" id="stat-morning">0</p>
+                </div>
+            </div>
+            <!-- Stat 4: Evening Slots -->
+            <div class="bg-white border border-border-light/80 p-6 rounded-[24px] shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-2xl">nights_stay</span>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-xs font-bold uppercase tracking-widest">Evening Slots</h3>
+                    <p class="text-3xl font-bold font-headline mt-1 text-slate-800" id="stat-evening">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="bg-white border border-border-light/80 p-6 rounded-[24px] shadow-sm flex flex-col xl:flex-row gap-5 items-stretch xl:items-center justify-between">
+            <div class="flex-grow max-w-xl flex items-center bg-background border border-border-light rounded-2xl px-4 py-3 gap-3 focus-within:ring-2 focus-within:ring-secondary/40 transition-all">
+                <span class="material-symbols-outlined text-slate-400 text-sm">search</span>
+                <input type="text" id="search-input" placeholder="Search patients by name or phone..." class="bg-transparent border-none outline-none text-sm w-full focus:ring-0 text-slate-800 placeholder-slate-400 font-medium">
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
+                <div class="relative flex-1 md:flex-initial">
+                    <select id="treatment-filter" class="w-full md:w-auto bg-background border border-border-light rounded-2xl px-5 py-3 pr-10 text-sm focus:ring-2 focus:ring-secondary/50 outline-none text-slate-700 font-semibold appearance-none cursor-pointer">
+                        <option value="">All Treatments</option>
+                        <option>Consultation / General Checkup</option>
+                        <option>Dental Implants</option>
+                        <option>Smile Designing</option>
+                        <option>Root Canal Therapy</option>
+                        <option>Teeth Whitening</option>
+                        <option>Emergency Care</option>
+                    </select>
+                    <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-base">expand_more</span>
+                </div>
+                
+                <div class="flex flex-col gap-2">
+                    <input type="date" id="date-filter" class="bg-background border border-border-light rounded-2xl px-5 py-3 text-sm focus:ring-2 focus:ring-secondary/50 outline-none text-slate-700 font-semibold cursor-pointer">
+                    <div id="selected-dates-chips" class="flex flex-wrap gap-1.5 max-w-[300px]"></div>
+                </div>
+                
+                <button onclick="clearFilters()" class="text-xs font-bold text-slate-400 hover:text-secondary py-2 px-4 transition-colors flex items-center justify-center gap-1 shrink-0">
+                    <span class="material-symbols-outlined text-sm">clear_all</span> Clear Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Bookings Table container -->
+        <div class="bg-transparent xl:bg-white xl:border xl:border-border-light/80 xl:rounded-[28px] xl:shadow-sm overflow-hidden flex-grow flex flex-col">
+            <div class="overflow-x-auto xl:overflow-x-visible custom-scrollbar flex-grow">
+                <table class="w-full text-left border-collapse block xl:table">
+                    <thead class="hidden xl:table-header-group">
+                        <tr class="bg-slate-50/70 border-b border-border-light text-[11px] font-bold uppercase tracking-widest text-slate-400">
+                            <th class="py-5 px-8">Patient Details</th>
+                            <th class="py-5 px-6">Treatment</th>
+                            <th class="py-5 px-6">Schedule Requested</th>
+                            <th class="py-5 px-6">Notes / Message</th>
+                            <th class="py-5 px-6">Booked Date</th>
+                            <th class="py-5 px-8 text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookings-table-body" class="block xl:table-row-group divide-y-0 xl:divide-y xl:divide-border-light/60 text-sm">
+                        <!-- Loading State placeholder -->
+                        <tr id="loading-row" class="block xl:table-row">
+                            <td colspan="6" class="py-24 text-center text-slate-400 block xl:table-cell">
+                                <div class="inline-block animate-spin w-9 h-9 border-4 border-secondary border-t-transparent rounded-full mb-4"></div>
+                                <p class="font-medium text-slate-500">Loading booking records...</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom Delete All Confirmation Modal (Press & Hold) -->
+    <div id="delete-all-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-md rounded-[32px] p-8 scandi-shadow border border-border-light relative mx-4 transform scale-95 transition-transform duration-300 flex flex-col gap-6" id="delete-all-modal-content">
+            <div class="text-center space-y-4">
+                <div class="w-14 h-14 bg-red-50 text-red-600 rounded-full flex items-center justify-center mx-auto border border-red-100">
+                    <span class="material-symbols-outlined text-3xl">warning</span>
+                </div>
+                <h3 class="font-headline text-lg font-bold text-slate-800">Delete All Bookings?</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    This action is permanent and cannot be undone. All patient appointment requests will be deleted from the database.
+                </p>
+            </div>
+
+            <!-- Press & Hold Button Container -->
+            <div class="relative w-full">
+                <button id="press-hold-btn" class="w-full bg-slate-100 hover:bg-slate-200/80 text-slate-700 py-4 rounded-2xl font-bold text-sm relative overflow-hidden transition-all duration-200 select-none active:scale-[0.98]">
+                    <!-- Filling Progress Indicator -->
+                    <div id="hold-progress" class="absolute left-0 top-0 bottom-0 bg-red-600/20 w-0 transition-all duration-75 pointer-events-none"></div>
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-sm">touch_app</span>
+                        <span id="hold-btn-text">Press & Hold to Confirm</span>
+                    </span>
+                </button>
+            </div>
+
+            <button id="close-delete-modal-btn" class="w-full text-slate-400 hover:text-slate-600 font-bold text-xs py-2 text-center transition-colors">
+                Cancel
+            </button>
+        </div>
+    </div>
+
+    <!-- Undo Toast Notification -->
+    <div id="undo-toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-4 rounded-2xl shadow-xl border border-slate-800 flex items-center gap-4 transition-all duration-300 translate-y-20 opacity-0 pointer-events-none">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-red-400 text-lg">delete</span>
+            <span class="text-sm font-medium" id="undo-toast-text">Appointment deleted.</span>
+        </div>
+        <button id="undo-btn" class="bg-secondary hover:bg-secondary/90 text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors">
+            Undo
+        </button>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://zisyxbmrxzlkwsgfqzex.supabase.co';
+        const supabaseKey = 'sb_publishable_yslfiwQ1nQgpq1AqG5Bkog_YLZha0KF';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        let allBookings = [];
+        let selectedDates = [];
+        let lastDeletedBooking = null;
+        let undoTimeout = null;
+
+        // Check Session Authentication on Load
+        document.addEventListener('DOMContentLoaded', async () => {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) {
+                // Redirect back to login
+                window.location.href = 'admin-login.html';
+            } else {
+                document.getElementById('user-email').textContent = session.user.email;
+                document.getElementById('dashboard-body').classList.remove('hidden');
+                
+                // Initial load with visible spinner
+                await fetchBookings(false);
+                
+                // Auto-refresh data silently every 30 seconds
+                setInterval(() => {
+                    fetchBookings(true);
+                }, 30000);
+            }
+
+            // Set up hold button event listeners
+            const pressHoldBtn = document.getElementById('press-hold-btn');
+            if (pressHoldBtn) {
+                pressHoldBtn.addEventListener('mousedown', startHold);
+                pressHoldBtn.addEventListener('mouseup', endHold);
+                pressHoldBtn.addEventListener('mouseleave', endHold);
+
+                pressHoldBtn.addEventListener('touchstart', startHold);
+                pressHoldBtn.addEventListener('touchend', endHold);
+                pressHoldBtn.addEventListener('touchcancel', endHold);
+            }
+            const closeModalBtn = document.getElementById('close-delete-modal-btn');
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', hideDeleteAllModal);
+            }
+
+            const undoBtn = document.getElementById('undo-btn');
+            if (undoBtn) {
+                undoBtn.addEventListener('click', async () => {
+                    if (!lastDeletedBooking) return;
+                    
+                    const bookingToRestore = lastDeletedBooking;
+                    hideUndoToast();
+                    
+                    try {
+                        const { error } = await supabaseClient
+                            .from('appointments')
+                            .insert([{
+                                full_name: bookingToRestore.full_name,
+                                phone_number: bookingToRestore.phone_number,
+                                service_type: bookingToRestore.service_type,
+                                preferred_date: bookingToRestore.preferred_date,
+                                preferred_time_slot: bookingToRestore.preferred_time_slot,
+                                message: bookingToRestore.message
+                            }]);
+
+                        if (error) throw error;
+                        
+                        fetchBookings(true);
+                    } catch (err) {
+                        console.error(err);
+                        alert("Failed to restore appointment: " + (err.message || err));
+                    }
+                });
+            }
+        });
+
+        // Sign Out Listener
+        document.getElementById('logout-btn').addEventListener('click', async () => {
+            await supabaseClient.auth.signOut();
+            window.location.href = 'admin-login.html';
+        });
+
+        // Fetch Appointments
+        async function fetchBookings(isSilent = false) {
+            const tbody = document.getElementById('bookings-table-body');
+            
+            // Only clear the table and show a spinner if it's NOT a silent background update
+            if (!isSilent) {
+                tbody.innerHTML = `
+                    <tr id="loading-row">
+                        <td colspan="6" class="py-20 text-center text-slate-400">
+                            <div class="inline-block animate-spin w-8 h-8 border-4 border-secondary border-t-transparent rounded-full mb-4"></div>
+                            <p class="font-medium">Fetching records...</p>
+                        </td>
+                    </tr>
+                `;
+            }
+
+            try {
+                const { data, error } = await supabaseClient
+                    .from('appointments')
+                    .select('*')
+                    .order('created_at', { ascending: false });
+
+                if (error) throw error;
+
+                allBookings = data || [];
+                renderBookings(allBookings);
+                updateStats(allBookings);
+            } catch (err) {
+                console.error(err);
+                if (!isSilent) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="6" class="py-20 text-center text-red-500 font-semibold">
+                                <span class="material-symbols-outlined text-4xl mb-2">error</span>
+                                <p>Failed to load appointments: ${err.message || err}</p>
+                            </td>
+                        </tr>
+                    `;
+                }
+            }
+        }
+
+        // Render Bookings List
+        function renderBookings(bookings) {
+            const tbody = document.getElementById('bookings-table-body');
+            tbody.innerHTML = '';
+
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+            const treatmentFilter = document.getElementById('treatment-filter').value;
+            const dateFilter = document.getElementById('date-filter').value;
+
+            // Apply client-side filtering
+            const filtered = bookings.filter(b => {
+                const matchesSearch = b.full_name.toLowerCase().includes(searchTerm) || b.phone_number.includes(searchTerm);
+                const matchesTreatment = !treatmentFilter || b.service_type === treatmentFilter;
+                const matchesDate = selectedDates.length === 0 || selectedDates.includes(b.preferred_date);
+                return matchesSearch && matchesTreatment && matchesDate;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = `
+                    <tr class="block lg:table-row">
+                        <td colspan="6" class="py-20 text-center text-slate-400 font-medium block lg:table-cell">
+                            <span class="material-symbols-outlined text-4xl mb-2">inbox</span>
+                            <p>No matching appointment requests found.</p>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            filtered.forEach(b => {
+                const tr = document.createElement('tr');
+                tr.className = "block xl:table-row bg-white border border-border-light/80 rounded-[24px] p-6 mb-6 shadow-sm xl:border-none xl:p-0 xl:mb-0 xl:shadow-none xl:bg-transparent hover:bg-slate-50/50 transition-colors";
+
+                // Format created date
+                const createdDate = new Date(b.created_at).toLocaleDateString('en-IN', {
+                    day: 'numeric',
+                    month: 'short',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+
+                // Format appointment date
+                const apptDate = new Date(b.preferred_date).toLocaleDateString('en-IN', {
+                    weekday: 'short',
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+
+                // Prepare WhatsApp Link (strip spaces and +)
+                const waCleanNum = b.phone_number.replace(/\s+/g, '').replace('+', '');
+
+                // Note bubble markup
+                const notesMarkup = b.message 
+                    ? `<div class="bg-slate-50 border-l-4 border-slate-200/80 p-3 rounded-r-2xl max-w-xs text-xs text-slate-600 font-medium leading-relaxed">${escapeHTML(b.message)}</div>`
+                    : `<span class="text-slate-300 italic text-xs">No notes provided</span>`;
+
+                tr.innerHTML = `
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-8 border-b border-dashed border-border-light/60 xl:border-none last:border-none">
+                        <div class="font-bold text-slate-800 text-[15px]">${escapeHTML(b.full_name)}</div>
+                        <div class="mt-2 flex flex-col gap-1.5">
+                            <a href="tel:${b.phone_number}" class="text-slate-500 hover:text-secondary text-xs font-semibold flex items-center gap-1.5 w-fit transition-colors">
+                                <span class="material-symbols-outlined text-[14px] text-slate-400">call</span>
+                                ${escapeHTML(b.phone_number)}
+                            </a>
+                            <a href="https://wa.me/${waCleanNum}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-[11px] font-bold rounded-full transition-colors mt-0.5 w-fit">
+                                <span class="material-symbols-outlined text-[13px]">chat</span> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </td>
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-6 border-b border-dashed border-border-light/60 xl:border-none last:border-none flex items-center xl:items-start">
+                        <span class="inline-block xl:hidden text-slate-400 font-bold text-xs uppercase tracking-wider w-24 shrink-0">Treatment</span>
+                        ${getTreatmentBadge(b.service_type)}
+                    </td>
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-6 border-b border-dashed border-border-light/60 xl:border-none last:border-none flex flex-row items-center xl:items-start xl:flex-col gap-1 xl:gap-0">
+                        <span class="inline-block xl:hidden text-slate-400 font-bold text-xs uppercase tracking-wider w-24 shrink-0">Schedule</span>
+                        <div>
+                            <div class="font-bold text-slate-700 xl:text-primary flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px] text-slate-400 hidden xl:inline">calendar_month</span>
+                                ${apptDate}
+                            </div>
+                            ${getSlotMarkup(b.preferred_time_slot)}
+                        </div>
+                    </td>
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-6 border-b border-dashed border-border-light/60 xl:border-none last:border-none flex flex-col xl:flex-row items-start">
+                        <span class="inline-block xl:hidden text-slate-400 font-bold text-xs uppercase tracking-wider w-24 shrink-0 mb-1.5">Notes</span>
+                        ${notesMarkup}
+                    </td>
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-6 border-b border-dashed border-border-light/60 xl:border-none last:border-none flex items-center">
+                        <span class="inline-block xl:hidden text-slate-400 font-bold text-xs uppercase tracking-wider w-24 shrink-0">Booked On</span>
+                        <span class="text-slate-400 text-xs font-semibold">${createdDate}</span>
+                    </td>
+                    <td class="block xl:table-cell py-3 px-0 xl:py-5 xl:px-8 xl:text-right">
+                        <!-- Mobile full-width delete button -->
+                        <div class="block xl:hidden border-t border-dashed border-border-light/60 pt-4 mt-2">
+                            <button onclick="deleteBooking(${b.id})" class="w-full text-red-500 hover:text-red-700 font-bold text-xs inline-flex items-center justify-center gap-1.5 border border-red-200 hover:border-red-500 px-4 py-2.5 rounded-xl transition-colors">
+                                <span class="material-symbols-outlined text-[16px]">delete</span> Delete Booking Record
+                            </button>
+                        </div>
+                        <!-- Desktop icon-only delete button -->
+                        <div class="hidden xl:inline-block">
+                            <button onclick="deleteBooking(${b.id})" title="Delete Appointment" class="p-2.5 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all border border-transparent hover:border-red-100 inline-flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px]">delete</span>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Delete Booking Handler
+        async function deleteBooking(id) {
+            const bookingToDelete = allBookings.find(b => b.id === id);
+            if (!bookingToDelete) return;
+
+            try {
+                const { error } = await supabaseClient
+                    .from('appointments')
+                    .delete()
+                    .eq('id', id);
+
+                if (error) throw error;
+
+                // Save for undo
+                lastDeletedBooking = bookingToDelete;
+                showUndoToast(bookingToDelete.full_name);
+
+                // Silent refresh list
+                fetchBookings(true);
+            } catch (err) {
+                console.error(err);
+                alert('Failed to delete booking: ' + (err.message || err));
+            }
+        }
+
+        function showUndoToast(patientName) {
+            const toast = document.getElementById('undo-toast');
+            const toastText = document.getElementById('undo-toast-text');
+            
+            toastText.textContent = `Deleted appointment for ${patientName}`;
+            
+            if (undoTimeout) clearTimeout(undoTimeout);
+            
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            
+            undoTimeout = setTimeout(() => {
+                hideUndoToast();
+            }, 6000);
+        }
+
+        function hideUndoToast() {
+            const toast = document.getElementById('undo-toast');
+            toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            lastDeletedBooking = null;
+        }
+
+        // Press & Hold Deletion Logic
+        let holdInterval = null;
+        let holdDuration = 2000; // 2 seconds
+        let currentHoldTime = 0;
+
+        function showDeleteAllModal() {
+            if (allBookings.length === 0) {
+                alert("There are no appointment records to delete.");
+                return;
+            }
+            const modal = document.getElementById('delete-all-modal');
+            const content = document.getElementById('delete-all-modal-content');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.remove('scale-95');
+            }, 10);
+            resetHold();
+        }
+
+        function hideDeleteAllModal() {
+            const modal = document.getElementById('delete-all-modal');
+            const content = document.getElementById('delete-all-modal-content');
+            modal.classList.add('opacity-0');
+            content.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            resetHold();
+        }
+
+        function startHold(e) {
+            e.preventDefault();
+            resetHold();
+            
+            const btnText = document.getElementById('hold-btn-text');
+            const btn = document.getElementById('press-hold-btn');
+            const progress = document.getElementById('hold-progress');
+
+            btnText.textContent = "Hold to delete...";
+            btn.classList.add('ring-2', 'ring-red-500/50');
+            
+            const step = 50; // update every 50ms
+            holdInterval = setInterval(() => {
+                currentHoldTime += step;
+                const percentage = Math.min((currentHoldTime / holdDuration) * 100, 100);
+                progress.style.width = `${percentage}%`;
+                
+                if (currentHoldTime >= holdDuration) {
+                    clearInterval(holdInterval);
+                    executeDeleteAll();
+                }
+            }, step);
+        }
+
+        function endHold() {
+            if (currentHoldTime < holdDuration) {
+                resetHold();
+            }
+        }
+
+        function resetHold() {
+            if (holdInterval) clearInterval(holdInterval);
+            currentHoldTime = 0;
+            const progress = document.getElementById('hold-progress');
+            const btnText = document.getElementById('hold-btn-text');
+            const btn = document.getElementById('press-hold-btn');
+            if (progress) progress.style.width = '0%';
+            if (btnText) btnText.textContent = "Press & Hold to Confirm";
+            if (btn) btn.classList.remove('ring-2', 'ring-red-500/50');
+        }
+
+        async function executeDeleteAll() {
+            resetHold();
+            hideDeleteAllModal();
+            
+            try {
+                const { error } = await supabaseClient
+                    .from('appointments')
+                    .delete()
+                    .neq('id', 0);
+
+                if (error) throw error;
+
+                alert("All appointments have been successfully deleted.");
+                fetchBookings();
+            } catch (err) {
+                console.error(err);
+                alert("Failed to delete all bookings: " + (err.message || err));
+            }
+        }
+
+        // Update statistics grid
+        function updateStats(bookings) {
+            const total = bookings.length;
+
+            const todayStr = new Date().toISOString().split('T')[0];
+            const todayCount = bookings.filter(b => b.preferred_date === todayStr).length;
+
+            const morningCount = bookings.filter(b => b.preferred_time_slot.toLowerCase().includes('morning')).length;
+            const eveningCount = bookings.filter(b => b.preferred_time_slot.toLowerCase().includes('evening')).length;
+
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-today').textContent = todayCount;
+            document.getElementById('stat-morning').textContent = morningCount;
+            document.getElementById('stat-evening').textContent = eveningCount;
+        }
+
+        // Filter event listeners
+        document.getElementById('search-input').addEventListener('input', () => renderBookings(allBookings));
+        document.getElementById('treatment-filter').addEventListener('change', () => renderBookings(allBookings));
+        
+        document.getElementById('date-filter').addEventListener('change', (e) => {
+            const dateVal = e.target.value;
+            if (dateVal && !selectedDates.includes(dateVal)) {
+                selectedDates.push(dateVal);
+                e.target.value = '';
+                renderSelectedDateChips();
+                renderBookings(allBookings);
+            }
+        });
+
+        function renderSelectedDateChips() {
+            const container = document.getElementById('selected-dates-chips');
+            container.innerHTML = '';
+            selectedDates.forEach(dateStr => {
+                const chip = document.createElement('span');
+                chip.className = 'inline-flex items-center gap-1.5 px-3 py-1 bg-secondary/15 text-secondary border border-secondary/20 rounded-full text-xs font-bold transition-all';
+                
+                const formattedDate = new Date(dateStr).toLocaleDateString('en-IN', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+                
+                chip.innerHTML = `
+                    <span>${formattedDate}</span>
+                    <button type="button" class="hover:text-red-500 font-bold flex items-center justify-center" onclick="removeSelectedDate('${dateStr}')">
+                        <span class="material-symbols-outlined text-[13px] block">close</span>
+                    </button>
+                `;
+                container.appendChild(chip);
+            });
+        }
+
+        function removeSelectedDate(dateStr) {
+            selectedDates = selectedDates.filter(d => d !== dateStr);
+            renderSelectedDateChips();
+            renderBookings(allBookings);
+        }
+
+        function clearFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('treatment-filter').value = '';
+            document.getElementById('date-filter').value = '';
+            selectedDates = [];
+            renderSelectedDateChips();
+            renderBookings(allBookings);
+        }
+
+        // Helper for treatment card formatting badges
+        function getTreatmentBadge(serviceType) {
+            const escaped = escapeHTML(serviceType);
+            const lower = serviceType.toLowerCase();
+            
+            let bgClass = "bg-secondary/10 text-secondary border border-secondary/20"; // default teal
+            
+            if (lower.includes('implants') || lower.includes('smile')) {
+                bgClass = "bg-purple-50 text-purple-700 border border-purple-100";
+            } else if (lower.includes('root') || lower.includes('canal')) {
+                bgClass = "bg-indigo-50 text-indigo-700 border border-indigo-100";
+            } else if (lower.includes('whitening')) {
+                bgClass = "bg-amber-50 text-amber-700 border border-amber-100";
+            } else if (lower.includes('emergency')) {
+                bgClass = "bg-rose-50 text-rose-700 border border-rose-100";
+            } else if (lower.includes('consultation') || lower.includes('checkup')) {
+                bgClass = "bg-emerald-50 text-emerald-700 border border-emerald-100";
+            }
+            
+            return `<span class="px-3 py-1 ${bgClass} text-xs font-bold rounded-full whitespace-nowrap">${escaped}</span>`;
+        }
+
+        // Helper for preferred slot icons
+        function getSlotMarkup(slot) {
+            const escaped = escapeHTML(slot);
+            const isMorning = slot.toLowerCase().includes('morning');
+            const icon = isMorning ? 'wb_twilight' : 'nights_stay';
+            const iconColor = isMorning ? 'text-indigo-500' : 'text-emerald-500';
+            
+            return `
+                <div class="flex items-center gap-1.5 text-xs text-slate-500 mt-1 font-semibold whitespace-nowrap">
+                    <span class="material-symbols-outlined text-[14px] ${iconColor}">${icon}</span>
+                    <span>${escaped}</span>
+                </div>
+            `;
+        }
+
+        // Helper to prevent XSS injection
+        function escapeHTML(str) {
+            if (!str) return '';
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+    </script>
+</body>
+</html>

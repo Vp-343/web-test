@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Services | Dr. Ishita's Dental Clinic</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary": "#ffffff",
+                            "border-light": "#E8ECEF",
+                            "surface-container": "#eceeef",
+                            "tertiary-fixed": "#a6eeff",
+                            "on-secondary": "#ffffff",
+                            "inverse-primary": "#bfc9be",
+                            "on-background": "#191c1d",
+                            "on-surface-variant": "#444843",
+                            "on-primary-container": "#7c867d",
+                            "on-secondary-fixed-variant": "#004e59",
+                            "tertiary-fixed-dim": "#76d4e9",
+                            "surface-container-low": "#f2f4f5",
+                            "secondary": "#216772",
+                            "on-primary": "#ffffff",
+                            "background": "#f8fafb",
+                            "surface-bright": "#f8fafb",
+                            "error": "#ba1a1a",
+                            "on-tertiary-container": "#2490a3",
+                            "on-primary-fixed-variant": "#3f4941",
+                            "on-surface": "#191c1d",
+                            "surface-container-highest": "#e1e3e4",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed": "#acedfa",
+                            "primary": "#000000",
+                            "on-error": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "surface-dim": "#d8dadb",
+                            "on-secondary-container": "#266b77",
+                            "inverse-surface": "#2e3132",
+                            "background-pure": "#FFFFFF",
+                            "surface-container-high": "#e6e8e9",
+                            "secondary-container": "#a9eaf7",
+                            "primary-container": "#151e17",
+                            "on-tertiary-fixed": "#001f25",
+                            "on-primary-fixed": "#151e17",
+                            "tertiary": "#000000",
+                            "on-tertiary-fixed-variant": "#004e5b",
+                            "surface": "#f8fafb",
+                            "surface-variant": "#e1e3e4",
+                            "surface-tint": "#576158",
+                            "tertiary-container": "#001f25",
+                            "inverse-on-surface": "#eff1f2",
+                            "outline": "#747873",
+                            "primary-fixed": "#dbe5da",
+                            "surface-container-lowest": "#ffffff",
+                            "primary-fixed-dim": "#bfc9be",
+                            "outline-variant": "#c4c8c1",
+                            "on-secondary-fixed": "#001f24",
+                            "text-primary": "#111111",
+                            "secondary-fixed-dim": "#90d1dd",
+                            "text-secondary": "#5E6468"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "32": "32px"
+                        },
+                        "spacing": {
+                            "gutter": "1.5rem",
+                            "container-padding": "4rem",
+                            "section-gap": "8rem",
+                            "mobile-margin": "1.25rem",
+                            "card-padding": "2.5rem"
+                        },
+                        "fontFamily": {
+                            "headline": ["Unbounded", "sans-serif"],
+                            "body": ["Manrope", "sans-serif"]
+                        },
+                        "fontSize": {
+                            "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "display-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "label-bold": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                        }
+                    },
+                }
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 5px;
+            border: 2px solid #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216772;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #f8fafb;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .premium-shadow {
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.04);
+        }
+
+        .benefit-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .treatment-card {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (max-width: 768px) {
+            .px-container-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden pt-16">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto px-container-padding py-3 transition-all duration-300">
+            <a class="flex items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-[20px] font-bold text-primary">Ishita's Dental</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-secondary text-sm font-bold transition-colors" href="services.html">Services</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="gallery.html">Smile Gallery</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="about.html">About Us</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="contact.html"
+                    class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2.5 rounded-32 text-sm font-bold hover:scale-95 transition-transform duration-200 inline-block text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-primary p-2 focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-[32px] block">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu"
+        class="hidden lg:hidden fixed top-[65px] left-0 right-0 bg-white border-b border-border-light shadow-lg z-40 transition-all duration-300">
+        <div class="flex flex-col p-6 gap-4 font-headline font-bold">
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="index.html">Home</a>
+            <a class="text-secondary text-base py-2 border-b border-gray-100" href="services.html">Services</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="gallery.html">Smile Gallery</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="about.html">About Us</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="contact.html">Contact</a>
+            <a class="bg-primary text-on-primary text-center py-3 rounded-32 text-sm font-bold mt-2"
+                href="contact.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative pt-12 pb-20 px-container-padding max-w-[1440px] mx-auto overflow-hidden">
+        <div class="absolute top-20 -right-20 w-96 h-96 bg-secondary-container/20 rounded-full blur-[100px] -z-10">
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/30 text-secondary font-label-bold text-label-bold uppercase tracking-widest">
+                    Expert Dental Services
+                </div>
+                <h1
+                    class="font-headline text-[32px] md:text-[48px] lg:text-[64px] font-bold leading-tight text-primary max-w-xl">
+                    Exceptional Care for <span class="text-secondary">Your Smile.</span></h1>
+                <p class="font-body-lg text-body-lg text-text-secondary max-w-lg leading-relaxed">
+                    Experience Scandinavian precision combined with patient-centric warmth. From preventive care to
+                    advanced smile transformations, we design your journey to optimal oral health.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html"
+                        class="w-full sm:w-auto bg-primary text-on-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all scandi-shadow inline-block text-center">
+                        Schedule a Consultation
+                    </a>
+                </div>
+            </div>
+            <div class="relative group">
+                <div
+                    class="w-full h-[500px] rounded-[48px] overflow-hidden premium-shadow transform rotate-1 group-hover:rotate-0 transition-transform duration-700">
+                    <div class="bg-cover bg-center w-full h-full" data-alt="Clinic surgery room"
+                        style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80')">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 -left-8 bg-white p-8 rounded-[32px] premium-shadow max-w-[240px]">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <span class="font-label-bold text-label-bold text-primary text-sm">ISO Certified Care</span>
+                    </div>
+                    <p class="text-[12px] text-text-secondary leading-tight">Adhering to the highest global standards of
+                        hygiene and clinical safety.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nordic Advantage Featured Section -->
+    <section class="py-section-gap bg-surface-container-low">
+        <div class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary">The Nordic Advantage
+                </h2>
+                <p class="text-text-secondary max-w-2xl mx-auto font-body-lg">Why patients choose our clinic for
+                    long-term oral health and restorative precision.</p>
+            </div>
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div
+                    class="benefit-card group p-6 sm:p-8 lg:p-card-padding bg-white rounded-[32px] shadow-sm border border-border-light hover:shadow-xl transition-all duration-500">
+                    <div
+                        class="icon-sphere w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-8 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-secondary text-3xl">ecg_heart</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Bone Preservation</h3>
+                    <p class="text-text-secondary leading-relaxed">Our specialized restorative treatments stimulate the
+                        jawbone just like natural roots, preventing the bone loss and facial sagging common with tooth
+                        loss.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div
+                    class="benefit-card group p-6 sm:p-8 lg:p-card-padding bg-white rounded-[32px] shadow-sm border border-border-light hover:shadow-xl transition-all duration-500">
+                    <div
+                        class="icon-sphere w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-8 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-secondary text-3xl">auto_awesome</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Natural Aesthetic</h3>
+                    <p class="text-text-secondary leading-relaxed">Custom-crafted porcelain solutions are color-matched
+                        to your natural teeth, providing a seamless and undetectable transition in every smile design.
+                    </p>
+                </div>
+                <!-- Benefit 3 -->
+                <div
+                    class="benefit-card group p-6 sm:p-8 lg:p-card-padding bg-white rounded-[32px] shadow-sm border border-border-light hover:shadow-xl transition-all duration-500">
+                    <div
+                        class="icon-sphere w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-8 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-secondary text-3xl">task_alt</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Permanent Stability</h3>
+                    <p class="text-text-secondary leading-relaxed">Our advanced procedures ensure fixed, reliable
+                        results that allow you to eat, speak, and smile with absolute confidence and lifelong
+                        durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Grid -->
+    <main id="treatments" class="py-section-gap px-container-padding max-w-[1440px] mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Our Specialties</h2>
+            <div class="h-1 w-24 bg-secondary mx-auto rounded-full"></div>
+            <p class="mt-8 text-text-secondary font-body-lg max-w-2xl mx-auto">From routine prophylaxis to complex
+                full-mouth rehabilitations, we offer a complete suite of modern dental solutions under one roof.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dental Implants -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-secondary/20 transition-all duration-500 group relative">
+                <div
+                    class="absolute top-6 right-6 px-3 py-1 bg-secondary text-white rounded-full text-[10px] font-label-bold uppercase tracking-widest">
+                    Most Popular</div>
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">dentistry</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Dental Implants</h3>
+                <p class="text-text-secondary mb-4 font-body-md leading-relaxed">98% success rate in permanent tooth
+                    replacement. We utilize 3D imaging and precision planning for minimal discomfort and optimal
+                    results.</p>
+                <ul class="space-y-2 mb-8 text-sm text-text-secondary">
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-secondary text-sm">check_circle</span> Medical-grade
+                        titanium posts</li>
+                    <li class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-secondary text-sm">check_circle</span> Guided 3D
+                        surgery</li>
+                </ul>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Smile Designing -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">auto_awesome</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Smile Designing</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">A bespoke aesthetic transformation
+                    combining multiple procedures to craft the perfect, harmonious smile you've always desired.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Root Canal Treatment -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">health_and_safety</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Root Canal Treatment</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Pain-free endodontic therapy designed
+                    to save your natural teeth from infection and prevent further oral complications.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Teeth Whitening -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">brightness_high</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Teeth Whitening</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Professional-grade brightening
+                    treatments that safely remove deep stains and enhance your natural luminosity.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Braces -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">grid_view</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Braces</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Modern orthodontic solutions including
+                    traditional and clear aligners to correct alignment and improve facial symmetry.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Pediatric Dentistry -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">child_care</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Pediatric Dentistry</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Gentle and fun dental care tailored
+                    specifically for children, ensuring a lifetime of healthy smiles from an early age.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Dentures -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">face</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Dentures</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Custom-fitted prosthetic devices
+                    designed to restore functionality and aesthetic appearance for those with missing teeth.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Scaling & Polishing -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">clean_hands</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Scaling &amp; Polishing</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Deep cleaning procedures to remove
+                    plaque and tartar, preventing gum disease and leaving your teeth feeling fresh.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+            <!-- Oral Cancer Rehab -->
+            <div
+                class="treatment-card bg-white p-card-padding rounded-[32px] premium-shadow border border-border-light transition-all duration-500 group">
+                <div
+                    class="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined text-[32px]">medical_services</span>
+                </div>
+                <h3 class="font-headline text-headline-md text-primary mb-4">Oral Cancer Rehab</h3>
+                <p class="text-text-secondary mb-8 font-body-md leading-relaxed">Specialized comprehensive care focusing
+                    on restoring function and quality of life for post-treatment patients.</p>
+                <a class="inline-flex items-center font-label-bold text-label-bold text-secondary group-hover:text-primary transition-colors"
+                    href="contact.html">
+                    Inquire Now <span class="material-symbols-outlined ml-1 text-[18px]">chevron_right</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="py-section-gap bg-background">
+        <div class="max-w-3xl mx-auto px-container-padding">
+            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-16">
+                Treatment FAQs</h2>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-border-light overflow-hidden shadow-sm">
+                    <button
+                        class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="font-label-bold text-lg text-primary">Is the implant procedure painful?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-6 text-text-secondary leading-relaxed">
+                        Most patients find the procedure remarkably comfortable. We use advanced local anesthesia and
+                        offer sedation options for anxious patients. The recovery period typically involves minor
+                        soreness that is easily managed with standard over-the-counter medication.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-border-light overflow-hidden shadow-sm">
+                    <button
+                        class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="font-label-bold text-lg text-primary">How long do dental restorations last?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-6 text-text-secondary leading-relaxed">
+                        With proper care and maintenance, solutions like dental implants are designed to be a lifetime
+                        solution. The porcelain crowns used in veneers and implants typically need evaluation for
+                        replacement every 15–20 years due to normal wear.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-border-light overflow-hidden shadow-sm">
+                    <button
+                        class="w-full px-8 py-6 flex justify-between items-center text-left hover:bg-surface-container-low transition-colors"
+                        onclick="toggleFaq(this)">
+                        <span class="font-label-bold text-lg text-primary">Am I a good candidate for advanced
+                            treatments?</span>
+                        <span
+                            class="material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden px-8 pb-6 text-text-secondary leading-relaxed">
+                        Most healthy adults are excellent candidates. During your initial consultation, we use 3D
+                        imaging to assess your dental anatomy and medical history to ensure a safe, predictable, and
+                        successful outcome for any procedure.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA / Appointment Section -->
+    <section class="py-section-gap px-gutter md:px-container-padding">
+        <div
+            class="max-w-[1440px] mx-auto bg-primary-container rounded-[48px] overflow-hidden relative p-12 lg:p-24 text-center text-on-primary">
+            <div class="relative z-10">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg mb-8 leading-tight">Ready for your
+                    transformation?</h2>
+                <p class="font-body-lg text-on-primary/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Join thousands of patients who have trusted Dr. Ishita with their oral health. Experience dental care
+                    that prioritizes your comfort and peace of mind.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="contact.html"
+                        class="w-full sm:w-auto bg-secondary-container text-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all scandi-shadow inline-block text-center">
+                        Book Your Visit
+                    </a>
+                    <a href="contact.html#info"
+                        class="w-full sm:w-auto bg-transparent border border-white/20 text-white px-10 py-5 rounded-32 font-bold text-lg hover:bg-white hover:text-primary transition-all inline-block text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full rounded-t-[32px] border-t border-border-light mt-20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1440px] mx-auto px-container-padding py-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="logo.png" alt="Ishita's Dental Logo" class="h-12 w-12 object-contain">
+                    <span class="font-headline text-[24px] font-bold text-primary">Ishita's Dental</span>
+                </a>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Pioneering clinical luxury and pain-free
+                    dentistry in the heart of Ahmedabad. Your health is our priority.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Treatments</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Dental
+                            Implants</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Smile
+                            Designing</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Invisible
+                            Aligners</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Root Canal
+                            Therapy</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html">Our Story</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html#doctors">Meet Our
+                            Doctors</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="gallery.html">Smile Gallery</a>
+                    </li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="contact.html#info">Contact
+                            Us</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="admin-login.html">Doctor
+                            Portal</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Contact Us</h5>
+                <div class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <p class="">Shivalik Platinum, 1st Floor, South Bopal Cross Road, Ahmedabad.</p>
+                    <p class="">+91 90541 75521</p>
+                    <p class="">care@ishitadental.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-surface-container-high py-8 text-center text-on-surface-variant text-sm">
+            <p class="">© 2024 Dr. Ishita's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+
+            // Close other FAQ items
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.add('hidden');
+                    item.previousElementSibling.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current FAQ item
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+
+
+        // Fade-in animation via IntersectionObserver
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                    setTimeout(() => {
+                        entry.target.classList.remove('duration-700');
+                    }, 700);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.benefit-card, .treatment-card').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    const toggleIcon = toggleBtn.querySelector('span');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'close';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    }
+                });
+
+                // Close menu when clicking any link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const toggleIcon = toggleBtn.querySelector('span');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    });
+                });
+            }
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileMenu();
+        });
+    </script>
+</body>
+
+</html>

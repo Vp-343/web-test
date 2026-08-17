@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dr. Ishita's Dental Clinic | Ahmedabad</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-variant": "#e1e3e4",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-container": "#2490a3",
+                            "tertiary": "#000000",
+                            "secondary-container": "#a9eaf7",
+                            "on-tertiary-fixed": "#001f25",
+                            "on-primary-fixed": "#151e17",
+                            "on-surface": "#191c1d",
+                            "primary-container": "#151e17",
+                            "surface-container-low": "#f2f4f5",
+                            "on-primary": "#ffffff",
+                            "tertiary-fixed-dim": "#76d4e9",
+                            "on-error-container": "#93000a",
+                            "on-primary-container": "#7c867d",
+                            "on-error": "#ffffff",
+                            "surface-tint": "#576158",
+                            "on-primary-fixed-variant": "#3f4941",
+                            "on-background": "#191c1d",
+                            "surface-bright": "#f8fafb",
+                            "primary": "#000000",
+                            "secondary": "#216772",
+                            "tertiary-fixed": "#a6eeff",
+                            "surface": "#f8fafb",
+                            "surface-container-lowest": "#ffffff",
+                            "inverse-on-surface": "#eff1f2",
+                            "outline-variant": "#c4c8c1",
+                            "error": "#ba1a1a",
+                            "secondary-fixed": "#acedfa",
+                            "inverse-primary": "#bfc9be",
+                            "on-secondary-container": "#266b77",
+                            "secondary-fixed-dim": "#90d1dd",
+                            "surface-container": "#eceeef",
+                            "on-surface-variant": "#444843",
+                            "border-light": "#E8ECEF",
+                            "background-pure": "#FFFFFF",
+                            "primary-fixed": "#dbe5da",
+                            "surface-dim": "#d8dadb",
+                            "surface-container-highest": "#e1e3e4",
+                            "text-secondary": "#5E6468",
+                            "primary-fixed-dim": "#bfc9be",
+                            "error-container": "#ffdad6",
+                            "on-tertiary": "#ffffff",
+                            "tertiary-container": "#001f25",
+                            "background": "#f8fafb",
+                            "outline": "#747873",
+                            "on-secondary-fixed": "#001f24",
+                            "inverse-surface": "#2e3132",
+                            "on-tertiary-fixed-variant": "#004e5b",
+                            "on-secondary-fixed-variant": "#004e59",
+                            "surface-container-high": "#e6e8e9",
+                            "text-primary": "#111111"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "32": "32px"
+                        },
+                        "spacing": {
+                            "section-gap": "8rem",
+                            "mobile-margin": "1.25rem",
+                            "card-padding": "2.5rem",
+                            "container-padding": "4rem",
+                            "gutter": "1.5rem"
+                        },
+                        "fontFamily": {
+                            "headline": ["Unbounded", "sans-serif"],
+                            "body": ["Manrope", "sans-serif"]
+                        }
+                    }
+                }
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 5px;
+            border: 2px solid #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216772;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #f8fafb;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .scandi-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (max-width: 768px) {
+            .px-container-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 45s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .animate-marquee-desktop {
+            display: flex;
+            width: max-content;
+            animation: marquee 60s linear infinite;
+        }
+
+        .animate-marquee-desktop:hover {
+            animation-play-state: paused;
+        }
+
+        .animate-marquee-reverse {
+            display: flex;
+            width: max-content;
+            animation: marquee-reverse 45s linear infinite;
+        }
+
+        .animate-marquee-reverse:hover {
+            animation-play-state: paused;
+        }
+
+        @media print {
+            body>*:not(#booking-modal) {
+                display: none !important;
+            }
+
+            #booking-modal {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: auto !important;
+                background: white !important;
+                display: flex !important;
+                opacity: 100 !important;
+                pointer-events: auto !important;
+            }
+
+            #booking-modal-content {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                transform: none !important;
+            }
+
+            /* Hide modal buttons and close icons during printing */
+            #close-modal-btn,
+            #print-modal-btn,
+            #ok-modal-btn {
+                display: none !important;
+            }
+        }
+
+        /* Custom date input styling */
+        input[type="date"] {
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-clear-button {
+            display: none;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body class="text-on-background bg-background font-body overflow-x-hidden pt-16">
+
+    <!-- Floating CTA -->
+    <div id="floating-cta"
+        class="fixed bottom-8 right-8 z-[60] group opacity-0 pointer-events-none transition-all duration-300">
+        <a href="#appointment"
+            class="bg-primary text-on-primary p-4 md:px-8 md:py-4 rounded-32 font-bold flex items-center gap-3 floating-cta hover:scale-105 active:scale-95 transition-all shadow-lg">
+            <span class="material-symbols-outlined">calendar_month</span>
+            <span class="hidden md:inline">Book Appointment</span>
+        </a>
+    </div>
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 shadow-sm">
+        <div class="flex justify-between items-center max-w-[1440px] mx-auto px-container-padding py-3">
+            <a class="flex items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-[20px] font-bold text-primary">Ishita's Dental</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="text-secondary text-sm font-bold transition-colors" href="index.html">Home</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="services.html">Services</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="gallery.html">Smile Gallery</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="about.html">About Us</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="contact.html"
+                    class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2.5 rounded-32 text-sm font-bold hover:scale-95 transition-transform duration-200">
+                    Book Appointment
+                </a>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-primary p-2 focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-[32px] block">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu"
+        class="hidden lg:hidden fixed top-[65px] left-0 right-0 bg-white border-b border-border-light shadow-lg z-40 transition-all duration-300">
+        <div class="flex flex-col p-6 gap-4 font-headline font-bold">
+            <a class="text-secondary text-base py-2 border-b border-gray-100" href="index.html">Home</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="services.html">Services</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="gallery.html">Smile Gallery</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="about.html">About Us</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="contact.html">Contact</a>
+            <a class="bg-primary text-on-primary text-center py-3 rounded-32 text-sm font-bold mt-2"
+                href="contact.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-12 pb-20 px-container-padding max-w-[1440px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="lg:col-span-7 space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 bg-secondary-container/20 text-secondary px-4 py-2 rounded-full font-bold text-sm">
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                    Trusted Dental Excellence in Ahmedabad
+                </div>
+                <h1
+                    class="font-headline text-[32px] md:text-[44px] lg:text-[52px] xl:text-[64px] leading-tight font-bold text-primary">
+                    Healthy Smiles Begin with <span class="text-secondary">Gentle</span> Care
+                </h1>
+                <p class="text-[18px] text-on-surface-variant max-w-[600px] leading-relaxed">
+                    Experience advanced dental care tailored to your needs. From routine checkups to specialized
+                    treatments, Dr. Ishita offers a pain-free, tech-driven approach to oral wellness.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#appointment"
+                        class="w-full sm:w-auto bg-primary text-on-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all scandi-shadow inline-block text-center">
+                        Book Appointment
+                    </a>
+                    <a href="services.html"
+                        class="w-full sm:w-auto border-2 border-primary text-primary px-10 py-5 rounded-32 font-bold text-lg hover:bg-primary hover:text-on-primary transition-all inline-block text-center">View
+                        Services</a>
+                </div>
+            </div>
+            <!-- Right Image -->
+            <div class="lg:col-span-5 relative">
+                <div class="rounded-32 overflow-hidden scandi-shadow h-[600px] relative group">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Warm clinic atmosphere featuring happy patients and staff"
+                        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+                    <!-- Floating Card -->
+                    <div class="absolute bottom-8 left-8 bg-white p-6 rounded-32 scandi-shadow flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-secondary">calendar_today</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary">Next Available</p>
+                            <p id="next-available-slot"
+                                class="text-secondary text-sm font-bold uppercase tracking-wider">Today, 4:30 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Stats Section -->
+    <section class="py-20 bg-primary text-on-primary">
+        <div class="max-w-[1440px] mx-auto px-container-padding grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+            <div class="space-y-2">
+                <div class="text-[48px] md:text-[64px] font-headline font-bold stat-counter" data-target="12"
+                    data-suffix="+">0</div>
+                <p class="uppercase tracking-widest text-xs md:text-sm text-secondary-container font-bold">Years
+                    Excellence</p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-[48px] md:text-[64px] font-headline font-bold stat-counter" data-target="15"
+                    data-suffix="k+">0</div>
+                <p class="uppercase tracking-widest text-xs md:text-sm text-secondary-container font-bold">Happy Smiles
+                </p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-[48px] md:text-[64px] font-headline font-bold stat-counter" data-target="98"
+                    data-suffix="%">0</div>
+                <p class="uppercase tracking-widest text-xs md:text-sm text-secondary-container font-bold">Treatment
+                    Success</p>
+            </div>
+            <div class="space-y-2">
+                <div class="text-[48px] md:text-[64px] font-headline font-bold stat-counter" data-start="100"
+                    data-target="0" data-suffix="%">0</div>
+                <p class="uppercase tracking-widest text-xs md:text-sm text-secondary-container font-bold">Treatment
+                    Pain</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Grid -->
+    <section class="py-section-gap px-container-padding bg-surface-container-low" id="services">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-[600px]">
+                    <span class="text-secondary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Specialized
+                        Treatments</span>
+                    <h2 class="font-headline text-[32px] md:text-[48px] font-bold leading-tight">Comprehensive Oral Care
+                        Under One Roof</h2>
+                </div>
+                <a href="services.html"
+                    class="w-full md:w-auto bg-primary text-on-primary px-8 py-4 rounded-32 font-bold hover:scale-95 transition-transform inline-block text-center">
+                    Explore All Services
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div onclick="window.location.href='services.html'"
+                    class="scroll-anim bg-white p-8 rounded-32 hover:bg-secondary group transition-all duration-500 cursor-pointer scandi-shadow">
+                    <span
+                        class="material-symbols-outlined text-secondary group-hover:text-white text-[40px] mb-6 transition-colors">dentistry</span>
+                    <h4 class="font-headline text-[18px] font-bold group-hover:text-white transition-colors">Dental
+                        Implants</h4>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-secondary group-hover:text-white opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all">
+                        <span class="text-sm font-bold">Learn More</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </div>
+                <div onclick="window.location.href='services.html'"
+                    class="scroll-anim bg-white p-8 rounded-32 hover:bg-secondary group transition-all duration-500 cursor-pointer scandi-shadow">
+                    <span
+                        class="material-symbols-outlined text-secondary group-hover:text-white text-[40px] mb-6 transition-colors">mood</span>
+                    <h4 class="font-headline text-[18px] font-bold group-hover:text-white transition-colors">Smile
+                        Designing</h4>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-secondary group-hover:text-white opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all">
+                        <span class="text-sm font-bold">Learn More</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </div>
+                <div onclick="window.location.href='services.html'"
+                    class="scroll-anim bg-white p-8 rounded-32 hover:bg-secondary group transition-all duration-500 cursor-pointer scandi-shadow">
+                    <span
+                        class="material-symbols-outlined text-secondary group-hover:text-white text-[40px] mb-6 transition-colors">pulmonology</span>
+                    <h4 class="font-headline text-[18px] font-bold group-hover:text-white transition-colors">Root Canal
+                    </h4>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-secondary group-hover:text-white opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all">
+                        <span class="text-sm font-bold">Learn More</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </div>
+                <div onclick="window.location.href='services.html'"
+                    class="scroll-anim bg-white p-8 rounded-32 hover:bg-secondary group transition-all duration-500 cursor-pointer scandi-shadow">
+                    <span
+                        class="material-symbols-outlined text-secondary group-hover:text-white text-[40px] mb-6 transition-colors">straighten</span>
+                    <h4 class="font-headline text-[18px] font-bold group-hover:text-white transition-colors">Invisible
+                        Aligners</h4>
+                    <div
+                        class="mt-4 flex items-center gap-2 text-secondary group-hover:text-white opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all">
+                        <span class="text-sm font-bold">Learn More</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Tech Section -->
+    <section class="py-20 bg-surface-container-lowest">
+        <div class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <span class="text-secondary font-bold uppercase tracking-widest text-sm">Advanced
+                        Infrastructure</span>
+                    <h2 class="font-headline text-[32px] md:text-[48px] font-bold leading-tight">Elevating Care with
+                        High-End Technology</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white rounded-2xl border border-border-light scandi-shadow">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">biotech</span>
+                            <h4 class="font-bold text-lg mb-2">Advanced Digital Dentistry</h4>
+                            <p class="text-on-surface-variant text-sm">Precision imaging and 3D scanning for accurate
+                                diagnosis and customized treatment planning.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-border-light scandi-shadow">
+                            <span class="material-symbols-outlined text-secondary text-4xl mb-4">sanitizer</span>
+                            <h4 class="font-bold text-lg mb-2">World-Class Sterilization</h4>
+                            <p class="text-on-surface-variant text-sm">Strict adherence to international safety
+                                protocols with 7-step sterilization procedures.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-32 overflow-hidden scandi-shadow h-[400px]">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80"
+                        alt="Modern dental operatory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Experts Section -->
+    <section class="py-section-gap px-container-padding max-w-[1440px] mx-auto" id="experts">
+        <div class="text-center mb-16">
+            <span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Our Medical Team</span>
+            <h2 class="font-headline text-[32px] md:text-[48px] font-bold leading-tight">Meet Our Experts</h2>
+            <p class="text-on-surface-variant max-w-[700px] mx-auto mt-6">A team of dedicated professionals committed to
+                providing the highest quality dental care with a gentle, patient-first approach.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Expert 1 -->
+            <div
+                class="scroll-anim group bg-white rounded-[40px] overflow-hidden scandi-shadow border border-border-light hover:-translate-y-2 transition-all duration-300">
+                <div class="aspect-[4/5] overflow-hidden">
+                    <img src="IMG_6467-min.webp" alt="Dr. Ishita Parmar"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-10 text-center">
+                    <h3 class="font-headline text-2xl font-bold mb-2">Dr. Ishita Parmar</h3>
+                    <p class="text-secondary font-bold mb-4 uppercase tracking-wider text-sm">Dental Surgeon &amp;
+                        Endodontist</p>
+                    <p class="text-on-surface-variant text-sm mb-6">Expert in pain-free root canals and smile
+                        restoration with over 12 years of clinical excellence.</p>
+                    <div class="flex justify-center gap-4">
+                        <span class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold">BDS, MDS</span>
+                        <span class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold">Ex-Professor</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Expert 2 -->
+            <div
+                class="scroll-anim group bg-white rounded-[40px] overflow-hidden scandi-shadow border border-border-light hover:-translate-y-2 transition-all duration-300">
+                <div class="aspect-[4/5] overflow-hidden bg-secondary-container/10 flex items-center justify-center">
+                    <img src="IMG_6468-min.webp" alt="Dr. C. Parmar"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-10 text-center">
+                    <h3 class="font-headline text-2xl font-bold mb-2">Dr. C. Parmar</h3>
+                    <p class="text-secondary font-bold mb-4 uppercase tracking-wider text-sm">Dental Surgeon</p>
+                    <p class="text-on-surface-variant text-sm mb-6">Specializing in general dentistry and patient
+                        management with a focus on preventive oral health.</p>
+                    <div class="flex justify-center gap-4">
+                        <span class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold">BDS</span>
+                        <span class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold">Oral Care
+                            Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Horizontal Scrolling Marquee) -->
+    <section class="py-20 bg-surface-container-low overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-container-padding mb-12">
+            <div class="text-center">
+                <span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Patient
+                    Stories</span>
+                <h2 class="font-headline text-[32px] md:text-[48px] font-bold">What Our Patients Say</h2>
+            </div>
+        </div>
+
+        <!-- Outer container for marquee -->
+        <div class="relative w-full overflow-x-hidden py-4 flex flex-col gap-6">
+            <!-- Overlay fades for sides -->
+            <div
+                class="absolute left-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-r from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute right-0 top-0 bottom-0 w-8 md:w-32 bg-gradient-to-l from-surface-container-low to-transparent z-10 pointer-events-none">
+            </div>
+
+            <!-- Mobile/Tablet Layout: 2 Rows (Visible on mobile/tablet, hidden on desktop) -->
+            <div class="flex flex-col gap-6 lg:hidden">
+                <!-- Row 1: Animates Left -->
+                <div class="animate-marquee flex gap-6">
+                    <!-- GROUP A1 -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "We consulted 2-3 dentists for my mother’s dental problems, but Dr. Ishita was the best.
+                                Her way of listening and understanding patients is impeccable. Highly recommend her!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Priyank Bothra</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Had 3 root canals done! Dr. Ishita helped me through the process with so much patience.
+                                The treatment was painless, and my dental aesthetics look perfect. Super grateful!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Aashna Raja</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita is a skilled professional. She listened to my concerns and explained my
+                                treatment options thoroughly. Her gentle approach made the procedure very pleasant!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Raja Marut</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GROUP B1 (Duplicate) -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "We consulted 2-3 dentists for my mother’s dental problems, but Dr. Ishita was the best.
+                                Her way of listening and understanding patients is impeccable. Highly recommend her!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Priyank Bothra</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Had 3 root canals done! Dr. Ishita helped me through the process with so much patience.
+                                The treatment was painless, and my dental aesthetics look perfect. Super grateful!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Aashna Raja</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita is a skilled professional. She listened to my concerns and explained my
+                                treatment options thoroughly. Her gentle approach made the procedure very pleasant!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Raja Marut</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Animates Right -->
+                <div class="animate-marquee-reverse flex gap-6">
+                    <!-- GROUP A2 -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 4 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Needed to replace a tooth cap before traveling abroad in 2 days. Dr. Ishita was
+                                wonderful; she got a perfectly fitting zirconia cap made and fitted in just 48 hours!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Harsh Mistry</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Extremely happy with my treatment at Ishita’s clinic. The doctors are helpful, the
+                                support staff is kind and soft-spoken, and the appointment scheduling is highly
+                                professional."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Hiren Kavathiya</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita was a blessing for my dad's dentures. She was extremely patient,
+                                understanding, quick to identify the issue, and provided a fast, perfect solution."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Chaola Shah</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Family Care
+                                    Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GROUP B2 (Duplicate) -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 4 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Needed to replace a tooth cap before traveling abroad in 2 days. Dr. Ishita was
+                                wonderful; she got a perfectly fitting zirconia cap made and fitted in just 48 hours!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Harsh Mistry</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Extremely happy with my treatment at Ishita’s clinic. The doctors are helpful, the
+                                support staff is kind and soft-spoken, and the appointment scheduling is highly
+                                professional."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Hiren Kavathiya</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-32 scandi-shadow border border-border-light w-[280px] md:w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita was a blessing for my dad's dentures. She was extremely patient,
+                                understanding, quick to identify the issue, and provided a fast, perfect solution."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Chaola Shah</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Family Care
+                                    Review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Layout: 1 Row (Hidden on mobile/tablet, visible on desktop) -->
+            <div class="hidden lg:block">
+                <div class="animate-marquee-desktop flex gap-6">
+                    <!-- Group A (All 6 Testimonials) -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "We consulted 2-3 dentists for my mother’s dental problems, but Dr. Ishita was the best.
+                                Her way of listening and understanding patients is impeccable. Highly recommend her!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Priyank Bothra</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Had 3 root canals done! Dr. Ishita helped me through the process with so much patience.
+                                The treatment was painless, and my dental aesthetics look perfect. Super grateful!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Aashna Raja</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita is a skilled professional. She listened to my concerns and explained my
+                                treatment options thoroughly. Her gentle approach made the procedure very pleasant!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Raja Marut</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Needed to replace a tooth cap before traveling abroad in 2 days. Dr. Ishita was
+                                wonderful; she got a perfectly fitting zirconia cap made and fitted in just 48 hours!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Harsh Mistry</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Extremely happy with my treatment at Ishita’s clinic. The doctors are helpful, the
+                                support staff is kind and soft-spoken, and the appointment scheduling is highly
+                                professional."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Hiren Kavathiya</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita was a blessing for my dad's dentures. She was extremely patient,
+                                understanding, quick to identify the issue, and provided a fast, perfect solution."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Chaola Shah</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Family Care
+                                    Review</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Group B (Duplicate of all 6) -->
+                    <div class="flex gap-6">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "We consulted 2-3 dentists for my mother’s dental problems, but Dr. Ishita was the best.
+                                Her way of listening and understanding patients is impeccable. Highly recommend her!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Priyank Bothra</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Had 3 root canals done! Dr. Ishita helped me through the process with so much patience.
+                                The treatment was painless, and my dental aesthetics look perfect. Super grateful!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Aashna Raja</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita is a skilled professional. She listened to my concerns and explained my
+                                treatment options thoroughly. Her gentle approach made the procedure very pleasant!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Raja Marut</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Needed to replace a tooth cap before traveling abroad in 2 days. Dr. Ishita was
+                                wonderful; she got a perfectly fitting zirconia cap made and fitted in just 48 hours!"
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Harsh Mistry</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 5 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Extremely happy with my treatment at Ishita’s clinic. The doctors are helpful, the
+                                support staff is kind and soft-spoken, and the appointment scheduling is highly
+                                professional."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Hiren Kavathiya</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Verified
+                                    Patient</p>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div
+                            class="bg-white p-8 rounded-32 scandi-shadow border border-border-light w-[400px] shrink-0 flex flex-col justify-between whitespace-normal">
+                            <p class="text-on-surface-variant text-sm italic leading-relaxed mb-6">
+                                "Dr. Ishita was a blessing for my dad's dentures. She was extremely patient,
+                                understanding, quick to identify the issue, and provided a fast, perfect solution."
+                            </p>
+                            <div>
+                                <h4 class="font-headline text-[16px] font-bold text-primary">Chaola Shah</h4>
+                                <p class="text-secondary text-xs font-bold uppercase tracking-wider mt-1">Family Care
+                                    Review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Smile Gallery Section -->
+    <section class="py-section-gap px-container-padding max-w-[1440px] mx-auto" id="gallery">
+        <div class="text-center mb-16">
+            <span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Smile Gallery</span>
+            <h2 class="font-headline text-[32px] md:text-[48px] font-bold">Transformative Results</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div onclick="window.location.href='gallery.html'"
+                class="scroll-anim rounded-32 overflow-hidden scandi-shadow border border-border-light group cursor-pointer relative">
+                <img src="IMAGES/g2-min-scaled.jpg" alt="Before After Dental Implants"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white font-bold bg-primary/80 px-6 py-2 rounded-full">View Case Study</span>
+                </div>
+            </div>
+            <div onclick="window.location.href='gallery.html'"
+                class="scroll-anim rounded-32 overflow-hidden scandi-shadow border border-border-light group cursor-pointer relative">
+                <img src="IMAGES/WhatsApp-Image-2022-10-19-at-9.37.54-AM-480x500.jpeg" alt="Happy Patient"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white font-bold bg-primary/80 px-6 py-2 rounded-full">View Story</span>
+                </div>
+            </div>
+            <div onclick="window.location.href='gallery.html'"
+                class="scroll-anim rounded-32 overflow-hidden scandi-shadow border border-border-light bg-secondary-container/20 flex flex-col items-center justify-center p-12 text-center group cursor-pointer">
+                <span
+                    class="material-symbols-outlined text-6xl text-secondary mb-6 group-hover:rotate-12 transition-transform">photo_library</span>
+                <h4 class="text-2xl font-bold mb-4">500+ Success Stories</h4>
+                <p class="text-on-surface-variant mb-8">Browse our complete collection of clinical transformations and
+                    happy smiles.</p>
+                <a href="gallery.html"
+                    class="w-full sm:w-auto bg-primary text-on-primary px-8 py-3 rounded-32 font-bold inline-block text-center">Explore
+                    Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="py-section-gap px-container-padding max-w-[1440px] mx-auto" id="appointment">
+        <div
+            class="bg-white rounded-[48px] overflow-hidden scandi-shadow flex flex-col lg:flex-row border border-border-light">
+            <div class="lg:w-1/2 p-12 lg:p-20 bg-secondary-container/10">
+                <h2 class="font-headline text-[32px] md:text-[48px] font-bold leading-tight mb-8">Ready for Your New
+                    Smile?</h2>
+                <p class="text-on-surface-variant text-lg mb-12">Fill out the form below, and our clinic coordinator
+                    will contact you shortly to confirm your preferred slot.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6">
+                        <span class="material-symbols-outlined text-secondary">location_on</span>
+                        <p class="font-bold">South Bopal, Ahmedabad, Gujarat</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="material-symbols-outlined text-secondary">mail</span>
+                        <p class="font-bold">care@ishitadental.com</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <span class="material-symbols-outlined text-secondary">whatshot</span>
+                        <p class="font-bold">Chat on WhatsApp: +91 90541 75521</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 p-12 lg:p-20">
+                <form class="space-y-6" id="appointment-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input
+                            class="w-full p-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-secondary/50"
+                            placeholder="Full Name" type="text" name="full_name" required>
+                        <div
+                            class="flex bg-surface-container-low rounded-2xl focus-within:ring-2 focus-within:ring-secondary/50 overflow-hidden">
+                            <span
+                                class="flex items-center pl-4 pr-2 text-on-surface-variant font-bold border-r border-border-light text-sm select-none">+91</span>
+                            <input class="w-full p-4 pl-2 bg-transparent border-none focus:ring-0 focus:outline-none"
+                                placeholder="10-digit Phone" type="tel" name="phone_number" pattern="[0-9]{10}"
+                                maxlength="10" required>
+                        </div>
+                    </div>
+                    <select
+                        class="w-full p-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-secondary/50 text-on-surface-variant"
+                        name="service_type" required>
+                        <option value="">Select Treatment</option>
+                        <option>Consultation / General Checkup</option>
+                        <option>Dental Implants</option>
+                        <option>Smile Designing</option>
+                        <option>Root Canal Therapy</option>
+                        <option>Teeth Whitening</option>
+                        <option>Emergency Care</option>
+                    </select>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative w-full">
+                            <input
+                                class="w-full p-4 pr-12 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-secondary/50 text-on-surface-variant"
+                                type="date" name="preferred_date" required
+                                style="color-scheme: light; min-height: 56px;">
+                            <div
+                                class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant/70">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <select
+                            class="w-full p-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-secondary/50 text-on-surface-variant"
+                            name="preferred_time_slot" required>
+                            <option value="">Select Time Slot</option>
+                            <option>Morning (10:00 AM - 1:00 PM)</option>
+                            <option>Evening (5:00 PM - 8:00 PM)</option>
+                        </select>
+                    </div>
+                    <textarea
+                        class="w-full p-4 bg-surface-container-low border-none rounded-2xl focus:ring-2 focus:ring-secondary/50"
+                        placeholder="Your Message (Optional)" name="message" rows="4"></textarea>
+                    <button type="submit"
+                        class="w-full bg-primary text-on-primary py-5 rounded-32 font-bold text-lg hover:scale-[0.98] transition-transform">
+                        Confirm Appointment Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full rounded-t-[32px] border-t border-border-light mt-20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1440px] mx-auto px-container-padding py-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="logo.png" alt="Ishita's Dental Logo" class="h-12 w-12 object-contain">
+                    <span class="font-headline text-[24px] font-bold text-primary">Ishita's Dental</span>
+                </a>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Pioneering clinical luxury and pain-free
+                    dentistry in the heart of Ahmedabad. Your health is our priority.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Treatments</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Dental
+                            Implants</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Smile
+                            Designing</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Invisible
+                            Aligners</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Root Canal
+                            Therapy</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html">Our Story</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html#doctors">Meet Our
+                            Doctors</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="gallery.html">Smile Gallery</a>
+                    </li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="contact.html#info">Contact
+                            Us</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="admin-login.html">Doctor
+                            Portal</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Contact Us</h5>
+                <div class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <p class="">Shivalik Platinum, 1st Floor, South Bopal Cross Road, Ahmedabad.</p>
+                    <p class="">+91 90541 75521</p>
+                    <p class="">care@ishitadental.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-surface-container-high py-8 text-center text-on-surface-variant text-sm">
+            <p class="">© 2024 Dr. Ishita's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase Client
+        const supabaseUrl = 'https://zisyxbmrxzlkwsgfqzex.supabase.co';
+        const supabaseKey = 'sb_publishable_yslfiwQ1nQgpq1AqG5Bkog_YLZha0KF';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Counter Animation Logic
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-counter');
+            const duration = 1200; // Snappy 1.2 seconds duration for all counters
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const start = parseInt(counter.getAttribute('data-start')) || 0;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const suffix = counter.getAttribute('data-suffix') || '';
+
+                        let startTime = null;
+
+                        const step = (timestamp) => {
+                            if (!startTime) startTime = timestamp;
+                            const progress = Math.min((timestamp - startTime) / duration, 1);
+
+                            // Unique easeOutBack curve (creates a premium overshoot and bounce-back effect)
+                            const c1 = 1.70158;
+                            const c3 = c1 + 1;
+                            const easeProgress = 1 + c3 * Math.pow(progress - 1, 3) + c1 * Math.pow(progress - 1, 2);
+
+                            const currentValue = Math.floor(start + easeProgress * (target - start));
+
+                            // Clamp values to prevent negative values for positive stats
+                            const displayValue = start === 0 ? Math.max(0, currentValue) : Math.max(0, currentValue);
+                            counter.innerText = displayValue + suffix;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(step);
+                            } else {
+                                counter.innerText = target + suffix;
+                            }
+                        };
+
+                        requestAnimationFrame(step);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Scroll Fade-in Animations
+        function initScrollAnims() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        setTimeout(() => {
+                            entry.target.classList.remove('duration-700');
+                        }, 700);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-anim').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        }
+
+        // Form Submission Feedback & Dynamic Time Slot Management
+        function initAppointmentForm() {
+            const form = document.getElementById('appointment-form');
+            if (!form) return;
+
+            const dateInput = form.querySelector('[name="preferred_date"]');
+            const timeSelect = form.querySelector('[name="preferred_time_slot"]');
+
+            // Set min date to today's date
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            const todayStr = `${yyyy}-${mm}-${dd}`;
+
+            // Helper to find the next available clinic opening date (not Sunday, and not today after 8 PM)
+            function getNextAvailableDate() {
+                let tempDate = new Date();
+                for (let i = 0; i < 7; i++) {
+                    const y = tempDate.getFullYear();
+                    const m = String(tempDate.getMonth() + 1).padStart(2, '0');
+                    const d = String(tempDate.getDate()).padStart(2, '0');
+                    const tempStr = `${y}-${m}-${d}`;
+
+                    const dayOfWeek = tempDate.getDay();
+
+                    // Sunday is closed
+                    if (dayOfWeek === 0) {
+                        tempDate.setDate(tempDate.getDate() + 1);
+                        continue;
+                    }
+
+                    // If it is today and past 8:00 PM (20:00), we are closed for today
+                    if (tempStr === todayStr) {
+                        const currentHour = new Date().getHours();
+                        if (currentHour >= 20) {
+                            tempDate.setDate(tempDate.getDate() + 1);
+                            continue;
+                        }
+                    }
+
+                    // Found a valid opening date
+                    return tempStr;
+                }
+                return todayStr; // Fallback
+            }
+
+            if (dateInput) {
+                dateInput.min = todayStr;
+                dateInput.value = getNextAvailableDate();
+            }
+
+            // Validate date selection (Closed on Sundays, Closed for today after 8:00 PM)
+            function validateDateSelection() {
+                if (!dateInput) return;
+                const selectedDate = dateInput.value;
+                if (!selectedDate) return;
+
+                // Split date parts to prevent timezone shifting (local date parsing)
+                const parts = selectedDate.split('-');
+                const dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+                const day = dateObj.getDay();
+
+                if (day === 0) { // Sunday is closed
+                    alert("We are closed on Sundays. Please select a date between Monday and Saturday.");
+                    dateInput.value = '';
+                    return;
+                }
+
+                if (selectedDate === todayStr) {
+                    const currentHour = new Date().getHours();
+                    if (currentHour >= 20) { // 8:00 PM is closed
+                        alert("The clinic is closed for today. Please select a future date for your appointment.");
+                        dateInput.value = '';
+                        return;
+                    }
+                }
+            }
+
+            // Enforce time slot limits for today's booking
+            function updateTimeSlots() {
+                if (!dateInput || !timeSelect) return;
+                const selectedDate = dateInput.value;
+                const morningOption = timeSelect.querySelector('option[value="Morning (10:00 AM - 1:00 PM)"]') || [...timeSelect.options].find(o => o.text.includes('Morning'));
+
+                if (selectedDate === todayStr) {
+                    const currentHour = new Date().getHours();
+                    // If it's past 1:00 PM (13:00), morning slot is closed for today
+                    if (currentHour >= 13) {
+                        if (morningOption) {
+                            morningOption.disabled = true;
+                            morningOption.style.display = 'none';
+                        }
+                        // Auto-set value to Evening if Morning was selected
+                        if (timeSelect.value.toLowerCase().includes('morning') || timeSelect.value === '') {
+                            timeSelect.value = 'Evening (5:00 PM - 8:00 PM)';
+                        }
+                    }
+                } else {
+                    // Enable Morning option for future dates
+                    if (morningOption) {
+                        morningOption.disabled = false;
+                        morningOption.style.display = 'block';
+                    }
+                }
+            }
+
+            if (dateInput) {
+                dateInput.addEventListener('change', () => {
+                    validateDateSelection();
+                    updateTimeSlots();
+                });
+                // Run on load
+                validateDateSelection();
+                updateTimeSlots();
+            }
+
+            // Modal handler helpers
+            const modal = document.getElementById('booking-modal');
+            const modalContent = document.getElementById('booking-modal-content');
+
+            function openModal(details) {
+                if (!modal) return;
+
+                // Safe selector update helper to prevent crash on any missing elements
+                const setVal = (id, val) => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = val || '-';
+                };
+
+                // Format date nicely
+                let formattedDate = details.preferred_date;
+                if (details.preferred_date) {
+                    try {
+                        const parts = details.preferred_date.split('-');
+                        const dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+                        formattedDate = dateObj.toLocaleDateString('en-IN', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                        });
+                    } catch (e) {
+                        console.error('Date parsing failed:', e);
+                    }
+                }
+
+                setVal('receipt-id', 'IDC-' + (details.id || ''));
+                setVal('receipt-name', details.full_name);
+                setVal('receipt-phone', details.phone_number);
+                setVal('receipt-service', details.service_type);
+                setVal('receipt-date', formattedDate);
+                setVal('receipt-time', details.preferred_time_slot);
+                setVal('receipt-message', details.message || 'None');
+
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    if (modalContent) modalContent.classList.remove('scale-95');
+                }, 10);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.add('opacity-0');
+                if (modalContent) modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            // Close events
+            document.getElementById('close-modal-btn')?.addEventListener('click', closeModal);
+            document.getElementById('ok-modal-btn')?.addEventListener('click', closeModal);
+            document.getElementById('print-modal-btn')?.addEventListener('click', () => {
+                window.print();
+            });
+
+            // Phone confirmation modal logic helpers
+            let pendingPayload = null;
+            const phoneConfirmModal = document.getElementById('phone-confirm-modal');
+            const phoneConfirmModalContent = document.getElementById('phone-confirm-modal-content');
+            const confirmPhoneDisplay = document.getElementById('confirm-phone-display');
+
+            function openPhoneConfirm(phoneVal, payload) {
+                if (!phoneConfirmModal) return;
+                pendingPayload = payload;
+
+                // Format phone nicely: e.g. +91 90541 75521
+                const formattedDisplay = '+91 ' + phoneVal.slice(0, 5) + ' ' + phoneVal.slice(5);
+                confirmPhoneDisplay.textContent = formattedDisplay;
+
+                phoneConfirmModal.classList.remove('hidden');
+                setTimeout(() => {
+                    phoneConfirmModal.classList.remove('opacity-0');
+                    if (phoneConfirmModalContent) phoneConfirmModalContent.classList.remove('scale-95');
+                }, 10);
+            }
+
+            function closePhoneConfirm() {
+                if (!phoneConfirmModal) return;
+                phoneConfirmModal.classList.add('opacity-0');
+                if (phoneConfirmModalContent) phoneConfirmModalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    phoneConfirmModal.classList.add('hidden');
+                    pendingPayload = null;
+                }, 300);
+            }
+
+            // Close/Edit phone click handler
+            document.getElementById('phone-edit-btn')?.addEventListener('click', () => {
+                closePhoneConfirm();
+                const phoneInput = form.querySelector('[name="phone_number"]');
+                if (phoneInput) {
+                    phoneInput.focus();
+                    phoneInput.select();
+                }
+            });
+
+            // Yes, Correct phone click handler -> Proceed with insert
+            document.getElementById('phone-proceed-btn')?.addEventListener('click', async () => {
+                if (!pendingPayload) return;
+
+                // Capture a local copy of payload before closing confirm modal (which asynchronously clears pendingPayload)
+                const payloadCopy = { ...pendingPayload };
+                closePhoneConfirm();
+
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerText;
+                btn.innerText = 'Requesting Slot...';
+                btn.disabled = true;
+
+                // Generate booking reference ID client-side
+                const generatedBookingId = Math.floor(100000 + Math.random() * 900000);
+
+                try {
+                    // Insert into Supabase (pure write-only insert to comply with RLS)
+                    const { error } = await supabaseClient
+                        .from('appointments')
+                        .insert([payloadCopy]);
+
+                    if (error) throw error;
+
+                    // Success UI transition
+                    btn.innerText = 'Appointment Requested!';
+                    btn.classList.add('bg-secondary', 'text-white');
+
+                    // Open confirmation modal
+                    openModal({
+                        id: generatedBookingId,
+                        ...payloadCopy
+                    });
+
+                    form.reset();
+                    updateTimeSlots();
+                } catch (err) {
+                    console.error('Supabase Error:', err);
+                    alert('Supabase Submission Error:\n' + (err.message || JSON.stringify(err)));
+                    btn.innerText = 'Error! Try Again';
+                    btn.classList.add('bg-red-500', 'text-white');
+                } finally {
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.remove('bg-secondary', 'text-white', 'bg-red-500');
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+
+            // Form Submit intercept
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+                const rawPhone = payload.phone_number;
+
+                // Format phone number with +91 prefix
+                payload.phone_number = '+91 ' + rawPhone;
+
+                // Open phone confirm dialog
+                openPhoneConfirm(rawPhone, payload);
+            });
+        }
+
+        // Floating CTA scroll visibility trigger
+        function initFloatingCta() {
+            const heroSection = document.getElementById('hero');
+            const appointmentSection = document.getElementById('appointment');
+            const floatingCta = document.getElementById('floating-cta');
+            if (heroSection && floatingCta) {
+                window.addEventListener('scroll', () => {
+                    const rect = heroSection.getBoundingClientRect();
+                    const apptRect = appointmentSection ? appointmentSection.getBoundingClientRect() : null;
+                    const isApptVisible = apptRect ? (apptRect.top < window.innerHeight) : false;
+
+                    // Show floating button when Hero section is scrolled past the top navbar, 
+                    // but hide it when the last "contact us" (appointment) section is visible.
+                    if (rect.bottom < 80 && !isApptVisible) {
+                        floatingCta.classList.remove('opacity-0', 'pointer-events-none');
+                        floatingCta.classList.add('opacity-100', 'pointer-events-auto');
+                    } else {
+                        floatingCta.classList.add('opacity-0', 'pointer-events-none');
+                        floatingCta.classList.remove('opacity-100', 'pointer-events-auto');
+                    }
+                });
+            }
+        }
+
+        // Dynamic Next Available Slot Updater
+        function updateNextAvailableSlot() {
+            const now = new Date();
+            const day = now.getDay();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+
+            let slotText = "";
+
+            if (day === 0) {
+                // Sunday
+                slotText = "Tomorrow, 9:30 AM";
+            } else {
+                // Monday - Saturday
+                const currentMinutes = hours * 60 + minutes;
+                const morningStart = 9 * 60 + 30; // 9:30 AM
+                const afternoonEndLimit = 19 * 60 + 30; // 7:30 PM (last booking slot)
+
+                if (currentMinutes < morningStart) {
+                    slotText = "Today, 9:30 AM";
+                } else if (currentMinutes >= afternoonEndLimit) {
+                    if (day === 6) {
+                        slotText = "Monday, 9:30 AM"; // Saturday night -> Monday morning
+                    } else {
+                        slotText = "Tomorrow, 9:30 AM";
+                    }
+                } else {
+                    // Inside working hours: round to next 30 min slot (min 30 min buffer from now)
+                    const targetMinutes = Math.ceil((currentMinutes + 30) / 30) * 30;
+                    const targetHours = Math.floor(targetMinutes / 60);
+                    const targetMins = targetMinutes % 60;
+
+                    // If the target slot falls during the midday break (1:30 PM - 4:00 PM), push it to 4:00 PM
+                    const morningEnd = 13 * 60 + 30; // 1:30 PM
+                    const afternoonStart = 16 * 60;  // 4:00 PM
+
+                    if (targetMinutes > morningEnd && targetMinutes < afternoonStart) {
+                        slotText = "Today, 4:00 PM";
+                    } else {
+                        slotText = `Today, ${formatTime(targetHours, targetMins)}`;
+                    }
+                }
+            }
+
+            const slotElement = document.getElementById("next-available-slot");
+            if (slotElement) {
+                slotElement.textContent = slotText;
+            }
+        }
+
+        function formatTime(h, m) {
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            const displayH = h % 12 || 12;
+            const displayM = m < 10 ? '0' + m : m;
+            return `${displayH}:${displayM} ${ampm}`;
+        }
+
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    const toggleIcon = toggleBtn.querySelector('span');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'close';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    }
+                });
+
+                // Close menu when clicking any link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const toggleIcon = toggleBtn.querySelector('span');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    });
+                });
+            }
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCounters();
+            initScrollAnims();
+            initFloatingCta();
+            updateNextAvailableSlot();
+            initMobileMenu();
+            initAppointmentForm();
+        });
+    </script>
+    <!-- Booking Success Modal -->
+    <div id="booking-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-3xl rounded-[32px] scandi-shadow border border-border-light relative mx-4 transform scale-95 transition-transform duration-300 flex flex-col max-h-[90vh] overflow-hidden"
+            id="booking-modal-content">
+
+            <!-- Top Bar Warning Banner (Highly Prominent) -->
+            <div class="bg-amber-500/10 border-b border-amber-500/20 p-5 pr-14 flex items-center gap-3.5 shrink-0">
+                <span class="material-symbols-outlined text-amber-600 shrink-0 text-[22px]">info</span>
+                <p class="text-xs md:text-sm font-bold text-slate-800 leading-relaxed">
+                    We will review your request and contact you on the number provided shortly to confirm your exact
+                    appointment timing.
+                </p>
+            </div>
+
+            <!-- Close Button (Positioned over Top Bar) -->
+            <button id="close-modal-btn"
+                class="absolute top-3.5 right-4 w-9 h-9 rounded-full bg-slate-800/5 hover:bg-slate-800/10 flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-primary text-[20px]">close</span>
+            </button>
+
+            <!-- Split Grid Content (Scrollable Container) -->
+            <div class="p-8 md:p-10 overflow-y-auto custom-scrollbar flex flex-col md:flex-row gap-8 items-stretch">
+
+                <!-- Left Side: Status Header (38% Width) -->
+                <div
+                    class="md:w-[38%] flex flex-col gap-4 justify-center items-center md:items-start text-center md:text-left shrink-0">
+                    <div
+                        class="w-16 h-16 bg-emerald-500/10 text-emerald-600 rounded-full flex items-center justify-center mb-1">
+                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold text-primary">Appointment Requested!</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">
+                        Your request has been securely submitted. Please review your confirmation receipt.
+                    </p>
+                </div>
+
+                <!-- Vertical Divider -->
+                <div class="hidden md:block w-[1px] bg-border-light"></div>
+
+                <!-- Right Side: Details Receipt (62% Width) -->
+                <div class="flex-grow flex flex-col justify-between gap-6">
+                    <!-- Receipt Details -->
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Booking ID</span>
+                            <span class="font-bold text-primary" id="receipt-id">IDC-100000</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Patient Name</span>
+                            <span class="font-semibold text-primary" id="receipt-name">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Phone Number</span>
+                            <span class="font-semibold text-primary" id="receipt-phone">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Treatment</span>
+                            <span class="font-semibold text-primary" id="receipt-service">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Preferred Date</span>
+                            <span class="font-semibold text-primary" id="receipt-date">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Time Slot</span>
+                            <span class="font-semibold text-primary" id="receipt-time">-</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-on-surface-variant font-medium">Message (Optional)</span>
+                            <p class="text-on-surface-variant bg-surface-container rounded-2xl p-3 text-xs italic"
+                                id="receipt-message">None</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-4">
+                        <button id="print-modal-btn"
+                            class="flex-1 bg-surface-container hover:bg-secondary-container text-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-colors">
+                            <span class="material-symbols-outlined text-[18px]">print</span> Print Details
+                        </button>
+                        <button id="ok-modal-btn"
+                            class="flex-1 bg-primary text-on-primary py-4 rounded-2xl font-bold hover:scale-[0.98] transition-all">
+                            Close Window
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Phone Number Confirmation Modal -->
+    <div id="phone-confirm-modal"
+        class="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-md rounded-[32px] p-8 scandi-shadow border border-border-light relative mx-4 transform scale-95 transition-transform duration-300 flex flex-col gap-6"
+            id="phone-confirm-modal-content">
+            <div class="text-center">
+                <div
+                    class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-2xl">contact_phone</span>
+                </div>
+                <h3 class="font-headline text-lg font-bold text-primary">Is this your correct phone number?</h3>
+                <p class="text-on-surface-variant text-sm mt-2 leading-relaxed">
+                    We'll call or message you on this number to confirm your appointment time. Please make sure it's
+                    correct.
+                </p>
+                <div class="my-6 py-4 px-6 bg-slate-50 border border-border-light rounded-2xl text-2xl font-bold text-primary tracking-wide"
+                    id="confirm-phone-display">
+                    +91 90541 75521
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <button id="phone-edit-btn"
+                    class="flex-1 bg-surface-container-low hover:bg-slate-100 text-primary py-4 rounded-2xl font-bold text-sm transition-colors border border-border-light">
+                    Edit Number
+                </button>
+                <button id="phone-proceed-btn"
+                    class="flex-1 bg-secondary hover:bg-secondary/90 text-white py-4 rounded-2xl font-bold text-sm transition-colors shadow-sm">
+                    Yes, It's Correct
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

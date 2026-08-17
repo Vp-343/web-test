@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Smile Gallery | Dr. Ishita's Dental Clinic</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Manrope:wght@400;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary": "#ffffff",
+                            "border-light": "#E8ECEF",
+                            "surface-container": "#eceeef",
+                            "tertiary-fixed": "#a6eeff",
+                            "on-secondary": "#ffffff",
+                            "inverse-primary": "#bfc9be",
+                            "on-background": "#191c1d",
+                            "on-surface-variant": "#444843",
+                            "on-primary-container": "#7c867d",
+                            "on-secondary-fixed-variant": "#004e59",
+                            "tertiary-fixed-dim": "#76d4e9",
+                            "surface-container-low": "#f2f4f5",
+                            "secondary": "#216772",
+                            "on-primary": "#ffffff",
+                            "background": "#f8fafb",
+                            "surface-bright": "#f8fafb",
+                            "error": "#ba1a1a",
+                            "on-tertiary-container": "#2490a3",
+                            "on-primary-fixed-variant": "#3f4941",
+                            "on-surface": "#191c1d",
+                            "surface-container-highest": "#e1e3e4",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed": "#acedfa",
+                            "primary": "#000000",
+                            "on-error": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "surface-dim": "#d8dadb",
+                            "on-secondary-container": "#266b77",
+                            "inverse-surface": "#2e3132",
+                            "background-pure": "#FFFFFF",
+                            "surface-container-high": "#e6e8e9",
+                            "secondary-container": "#a9eaf7",
+                            "primary-container": "#151e17",
+                            "on-tertiary-fixed": "#001f25",
+                            "on-primary-fixed": "#151e17",
+                            "tertiary": "#000000",
+                            "on-tertiary-fixed-variant": "#004e5b",
+                            "surface": "#f8fafb",
+                            "surface-variant": "#e1e3e4",
+                            "surface-tint": "#576158",
+                            "tertiary-container": "#001f25",
+                            "inverse-on-surface": "#eff1f2",
+                            "outline": "#747873",
+                            "primary-fixed": "#dbe5da",
+                            "surface-container-lowest": "#ffffff",
+                            "primary-fixed-dim": "#bfc9be",
+                            "outline-variant": "#c4c8c1",
+                            "on-secondary-fixed": "#001f24",
+                            "text-primary": "#111111",
+                            "secondary-fixed-dim": "#90d1dd",
+                            "text-secondary": "#5E6468"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "32": "32px"
+                        },
+                        "spacing": {
+                            "gutter": "1.5rem",
+                            "container-padding": "4rem",
+                            "section-gap": "8rem",
+                            "mobile-margin": "1.25rem",
+                            "card-padding": "2.5rem"
+                        },
+                        "fontFamily": {
+                            "headline": ["Unbounded", "sans-serif"],
+                            "body": ["Manrope", "sans-serif"]
+                        },
+                        "fontSize": {
+                            "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "display-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "label-bold": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                        }
+                    },
+                }
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 5px;
+            border: 2px solid #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216772;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #f8fafb;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .before-after-slider {
+            --position: 50%;
+        }
+
+        .before-after-slider .slider-line {
+            left: var(--position);
+        }
+
+        .before-after-slider .after-image {
+            width: var(--position);
+        }
+
+        .masonry-grid {
+            column-count: 1;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            display: block;
+            transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .px-container-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body text-text-primary antialiased pt-16">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto px-container-padding py-3 transition-all duration-300">
+            <a class="flex items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-[20px] font-bold text-primary">Ishita's Dental</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="services.html">Services</a>
+                <a class="text-secondary text-sm font-bold transition-colors" href="gallery.html">Smile Gallery</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="about.html">About Us</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="contact.html"
+                    class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2.5 rounded-32 text-sm font-bold hover:scale-95 transition-transform duration-200 inline-block text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-primary p-2 focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-[32px] block">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu"
+        class="hidden lg:hidden fixed top-[65px] left-0 right-0 bg-white border-b border-border-light shadow-lg z-40 transition-all duration-300">
+        <div class="flex flex-col p-6 gap-4 font-headline font-bold">
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="index.html">Home</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="services.html">Services</a>
+            <a class="text-secondary text-base py-2 border-b border-gray-100" href="gallery.html">Smile Gallery</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="about.html">About Us</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="contact.html">Contact</a>
+            <a class="bg-primary text-on-primary text-center py-3 rounded-32 text-sm font-bold mt-2"
+                href="contact.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <main class="pt-12">
+        <!-- Hero Section -->
+        <section class="max-w-[1440px] mx-auto px-container-padding text-center mb-16">
+            <h1
+                class="font-headline text-[32px] md:text-[48px] lg:text-[64px] font-bold mb-6 max-w-4xl mx-auto leading-tight">
+                Transformative Results: Our Smile Stories</h1>
+            <p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+                Explore the journey of clinical excellence and patient tranquility. Each smile reflects Dr. Ishita’s
+                commitment to Scandinavian minimalist precision and aesthetic harmony.
+            </p>
+        </section>
+
+        <!-- Before & After Showcase -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-[32px] overflow-hidden shadow-2xl before-after-slider group aspect-[4/3] md:aspect-[16/11] max-h-[400px] bg-neutral-900 flex items-center justify-center"
+                    id="slider-1" style="--position: 50%;">
+                    <img alt="Before" class="w-full h-full object-contain"
+                        src="WhatsApp-Image-2022-10-11-at-11.13.43-AM-480x500.jpg">
+                    <img alt="After" class="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                        src="WhatsApp-Image-2022-10-11-at-11.13.44-AM-480x500.jpg"
+                        style="clip-path: polygon(0 0, var(--position) 0, var(--position) 100%, 0 100%);">
+                    <div class="slider-line absolute top-0 bottom-0 w-1 bg-white shadow-lg pointer-events-none"
+                        style="left: var(--position);">
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+                            <span class="material-symbols-outlined text-primary text-sm">unfold_more</span>
+                        </div>
+                    </div>
+                    <input class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize appearance-none"
+                        id="range-1" max="100" min="0" type="range" value="50">
+                    <div class="absolute bottom-6 left-6 flex gap-3">
+                        <span
+                            class="bg-white/90 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-primary">Smile
+                            Designing</span>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="w-12 h-1 bg-secondary mb-8"></div>
+                    <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg mb-6">Precision Designing</h2>
+                    <p class="font-body-lg text-body-lg text-text-secondary mb-8 leading-relaxed">
+                        Our patient approached us with concerns about alignment and shade. Through a comprehensive Smile
+                        Design protocol, we utilized minimal prep veneers to achieve a natural, bright, and harmonious
+                        look that fits their facial features perfectly.
+                    </p>
+                    <div class="bg-surface-container-low p-8 rounded-[24px] border border-border-light shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="material-symbols-outlined text-secondary"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="font-label-bold text-label-bold text-primary">PATIENT SUCCESS</span>
+                        </div>
+                        <blockquote class="italic text-text-secondary leading-relaxed">
+                            "The process was completely transparent and painless. Dr. Ishita took the time to explain
+                            every detail. I finally have the confidence to smile in photos again."
+                        </blockquote>
+                        <p class="mt-4 font-label-bold text-label-bold text-primary">— Ananya S., Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Filtering -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-12">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-primary text-white font-label-bold text-label-bold transition-all shadow-md"
+                    data-filter="all">All Stories</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-white text-text-secondary border border-border-light hover:border-secondary hover:text-secondary font-label-bold text-label-bold transition-all"
+                    data-filter="implants">Implants</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-white text-text-secondary border border-border-light hover:border-secondary hover:text-secondary font-label-bold text-label-bold transition-all"
+                    data-filter="smile-designing">Smile Designing</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-white text-text-secondary border border-border-light hover:border-secondary hover:text-secondary font-label-bold text-label-bold transition-all"
+                    data-filter="orthodontics">Orthodontics</button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-white text-text-secondary border border-border-light hover:border-secondary hover:text-secondary font-label-bold text-label-bold transition-all"
+                    data-filter="restoration">Restoration</button>
+            </div>
+        </section>
+
+        <!-- Masonry Gallery -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-24">
+            <div class="masonry-grid gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="restoration implants">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="IMAGES/g2-min-scaled.jpg">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">FULL ARCH RESTORATION</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Patient Case #102</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="smile-designing">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="IMAGES/WhatsApp-Image-2022-10-10-at-12.28.52-PM-2-480x500.webp">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">PORCELAIN VENEERS</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Radiant Aesthetics</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="restoration implants">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="IMAGES/WhatsApp-Image-2022-10-19-at-9.37.54-AM-480x500.jpeg">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">ZIRCONIA BRIDGES</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Functional Elegance</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="smile-designing">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="WhatsApp-Image-2022-10-10-at-12.28.51-PM-1-480x500.webp">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">COMPOSITE BONDING</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Subtle Refinement</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="restoration">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="WhatsApp-Image-2022-10-10-at-12.28.51-PM-480x500.webp">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">TREATMENT PLAN</p>
+                        <h4 class="font-headline text-headline-md leading-tight">The Modern Approach</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="smile-designing">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="WhatsApp-Image-2022-10-10-at-12.28.52-PM-1-480x500.webp">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">LASER DENTISTRY</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Gum Contouring</h4>
+                    </div>
+                </div>
+                <!-- Gallery Item 7 -->
+                <div class="scroll-anim masonry-item filter-item group relative rounded-[32px] overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                    data-category="orthodontics">
+                    <img alt="Patient Result"
+                        class="w-full grayscale hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                        src="WhatsApp-Image-2022-10-10-at-12.28.52-PM-480x500.webp">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                        <p class="font-label-bold text-label-bold mb-1 opacity-80">ORTHODONTICS</p>
+                        <h4 class="font-headline text-headline-md leading-tight">Clear Aligner Journey</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-24">
+            <div class="relative bg-primary-container rounded-[48px] overflow-hidden p-12 lg:p-24 text-center">
+                <!-- Abstract Atmospheric Background -->
+                <div class="absolute inset-0 opacity-20 pointer-events-none" id="cta-glow"></div>
+                <div class="relative z-10">
+                    <span
+                        class="inline-block bg-secondary-container/20 text-secondary-fixed px-6 py-2 rounded-full font-label-bold text-label-bold mb-8 tracking-widest uppercase">Start
+                        Your Transformation</span>
+                    <h2
+                        class="font-headline text-headline-lg-mobile md:text-headline-lg text-white mb-10 leading-tight">
+                        Ready for your
+                        new story?</h2>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="contact.html"
+                            class="w-full sm:w-auto bg-secondary-container text-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all inline-block text-center">
+                            Book Your Visit
+                        </a>
+                        <a href="contact.html#info"
+                            class="w-full sm:w-auto bg-transparent border border-white/20 text-white px-10 py-5 rounded-32 font-bold text-lg hover:bg-white hover:text-primary transition-all inline-block text-center">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <p class="font-headline text-[48px] text-primary mb-2">5k+</p>
+                <p class="font-label-bold text-label-bold text-text-secondary uppercase">Smiles Created</p>
+            </div>
+            <div class="text-center">
+                <p class="font-headline text-[48px] text-primary mb-2">15+</p>
+                <p class="font-label-bold text-label-bold text-text-secondary uppercase">Years Experience</p>
+            </div>
+            <div class="text-center">
+                <p class="font-headline text-[48px] text-primary mb-2">12</p>
+                <p class="font-label-bold text-label-bold text-text-secondary uppercase">Design Awards</p>
+            </div>
+            <div class="text-center">
+                <p class="font-headline text-[48px] text-primary mb-2">99%</p>
+                <p class="font-label-bold text-label-bold text-text-secondary uppercase">Happy Patients</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full rounded-t-[32px] border-t border-border-light mt-20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1440px] mx-auto px-container-padding py-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="logo.png" alt="Ishita's Dental Logo" class="h-12 w-12 object-contain">
+                    <span class="font-headline text-[24px] font-bold text-primary">Ishita's Dental</span>
+                </a>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Pioneering clinical luxury and pain-free
+                    dentistry in the heart of Ahmedabad. Your health is our priority.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Treatments</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Dental
+                            Implants</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Smile
+                            Designing</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Invisible
+                            Aligners</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Root Canal
+                            Therapy</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html">Our Story</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html#doctors">Meet Our
+                            Doctors</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="gallery.html">Smile Gallery</a>
+                    </li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="contact.html#info">Contact
+                            Us</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="admin-login.html">Doctor
+                            Portal</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Contact Us</h5>
+                <div class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <p class="">Shivalik Platinum, 1st Floor, South Bopal Cross Road, Ahmedabad.</p>
+                    <p class="">+91 90541 75521</p>
+                    <p class="">care@ishitadental.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-surface-container-high py-8 text-center text-on-surface-variant text-sm">
+            <p class="">© 2024 Dr. Ishita's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Before & After Slider Logic
+        const container = document.getElementById('slider-1');
+        const rangeInput = document.getElementById('range-1');
+
+        if (container && rangeInput) {
+            rangeInput.addEventListener('input', (e) => {
+                container.style.setProperty('--position', `${e.target.value}%`);
+            });
+        }
+
+        // CTA atmospheric glow animation
+        const ctaGlow = document.getElementById('cta-glow');
+        let lastTime = 0;
+        function updateGlow(time) {
+            if (ctaGlow) {
+                if (time - lastTime > 100) {
+                    const x = 50 + Math.sin(time / 1000) * 30;
+                    const y = 50 + Math.cos(time / 800) * 20;
+                    ctaGlow.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(169, 234, 247, 0.4) 0%, transparent 60%)`;
+                    lastTime = time;
+                }
+                requestAnimationFrame(updateGlow);
+            }
+        }
+        requestAnimationFrame(updateGlow);
+
+
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    const toggleIcon = toggleBtn.querySelector('span');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'close';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    }
+                });
+
+                // Close menu when clicking any link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const toggleIcon = toggleBtn.querySelector('span');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    });
+                });
+            }
+        }
+
+        // Gallery Category Filtering
+        function initGalleryFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.filter-item');
+
+            if (filterBtns.length === 0 || galleryItems.length === 0) return;
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Reset button classes
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-primary', 'text-white', 'shadow-md');
+                        b.classList.add('bg-white', 'text-text-secondary', 'border', 'border-border-light');
+                    });
+
+                    // Set active class on clicked button
+                    btn.classList.add('bg-primary', 'text-white', 'shadow-md');
+                    btn.classList.remove('bg-white', 'text-text-secondary', 'border', 'border-border-light');
+
+                    // Filter gallery items with smooth fade & scale transitions
+                    galleryItems.forEach(item => {
+                        const categories = item.getAttribute('data-category').split(' ');
+                        const isMatch = filterValue === 'all' || categories.includes(filterValue);
+
+                        if (isMatch) {
+                            if (item.timeoutId) clearTimeout(item.timeoutId);
+
+                            item.style.display = 'block';
+                            // Force browser reflow
+                            item.offsetHeight;
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+
+                            if (item.timeoutId) clearTimeout(item.timeoutId);
+                            item.timeoutId = setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 400);
+                        }
+                    });
+                });
+            });
+        }
+
+
+
+        // Scroll Fade-in Animations
+        function initScrollAnims() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        setTimeout(() => {
+                            entry.target.classList.remove('duration-700');
+                        }, 700);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-anim').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileMenu();
+            initGalleryFilters();
+            initScrollAnims();
+        });
+    </script>
+</body>
+
+</html>

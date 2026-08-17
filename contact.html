@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact Us | Dr. Ishita's Dental Clinic</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "border-light": "#E8ECEF",
+                            "secondary-fixed": "#acedfa",
+                            "surface-container-lowest": "#ffffff",
+                            "on-tertiary": "#ffffff",
+                            "surface": "#f8fafb",
+                            "primary-fixed-dim": "#bfc9be",
+                            "surface-dim": "#d8dadb",
+                            "on-primary": "#ffffff",
+                            "secondary-fixed-dim": "#90d1dd",
+                            "tertiary-fixed-dim": "#76d4e9",
+                            "on-error-container": "#93000a",
+                            "on-secondary-container": "#266b77",
+                            "outline": "#747873",
+                            "on-secondary-fixed-variant": "#004e59",
+                            "surface-container-high": "#e6e8e9",
+                            "text-secondary": "#5E6468",
+                            "inverse-on-surface": "#eff1f2",
+                            "text-primary": "#111111",
+                            "surface-container": "#eceeef",
+                            "surface-container-highest": "#e1e3e4",
+                            "outline-variant": "#c4c8c1",
+                            "on-tertiary-fixed": "#001f25",
+                            "on-background": "#191c1d",
+                            "on-error": "#ffffff",
+                            "error-container": "#ffdad6",
+                            "on-surface-variant": "#444843",
+                            "tertiary": "#000000",
+                            "on-primary-fixed": "#151e17",
+                            "inverse-surface": "#2e3132",
+                            "surface-tint": "#576158",
+                            "background": "#f8fafb",
+                            "on-primary-fixed-variant": "#3f4941",
+                            "surface-variant": "#e1e3e4",
+                            "secondary-container": "#a9eaf7",
+                            "on-tertiary-container": "#2490a3",
+                            "primary-container": "#151e17",
+                            "on-secondary-fixed": "#001f24",
+                            "secondary": "#216772",
+                            "on-secondary": "#ffffff",
+                            "tertiary-fixed": "#a6eeff",
+                            "on-primary-container": "#7c867d",
+                            "background-pure": "#FFFFFF",
+                            "surface-bright": "#f8fafb",
+                            "on-tertiary-fixed-variant": "#004e5b",
+                            "primary": "#000000",
+                            "tertiary-container": "#001f25",
+                            "primary-fixed": "#dbe5da",
+                            "error": "#ba1a1a",
+                            "surface-container-low": "#f2f4f5",
+                            "inverse-primary": "#bfc9be",
+                            "on-surface": "#191c1d"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "32": "32px",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "mobile-margin": "1.25rem",
+                            "card-padding": "2.5rem",
+                            "section-gap": "8rem",
+                            "gutter": "1.5rem",
+                            "container-padding": "4rem"
+                        },
+                        "fontFamily": {
+                            "headline": ["Unbounded", "sans-serif"],
+                            "body": ["Manrope", "sans-serif"]
+                        },
+                        "fontSize": {
+                            "label-bold": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "display-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                        }
+                    },
+                },
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 5px;
+            border: 2px solid #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216772;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #f8fafb;
+        }
+
+        body {
+            background-color: #F5F7F8;
+            color: #111111;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .scandi-card {
+            background: #FFFFFF;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid #E8ECEF;
+        }
+
+        .input-glow:focus {
+            box-shadow: 0 0 0 4px rgba(169, 234, 247, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes highlight-glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(169, 234, 247, 0.7);
+            }
+
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 20px 10px rgba(169, 234, 247, 0.5);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(169, 234, 247, 0);
+            }
+        }
+
+        .highlight-active {
+            animation: highlight-glow 1.5s ease-in-out 3;
+            border: 2px solid #a9eaf7 !important;
+        }
+
+        @media (max-width: 768px) {
+            .px-container-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+
+        @media print {
+            body>*:not(#booking-modal) {
+                display: none !important;
+            }
+
+            #booking-modal {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                height: auto !important;
+                background: white !important;
+                display: flex !important;
+                opacity: 100 !important;
+                pointer-events: auto !important;
+            }
+
+            #booking-modal-content {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                transform: none !important;
+            }
+
+            /* Hide modal buttons and close icons during printing */
+            #close-modal-btn,
+            #print-modal-btn,
+            #ok-modal-btn {
+                display: none !important;
+            }
+        }
+
+        /* Custom date input styling */
+        input[type="date"] {
+            position: relative;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-clear-button {
+            display: none;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body class="font-body text-body-md overflow-x-hidden pt-16">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto px-container-padding py-3 transition-all duration-300">
+            <a class="flex items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-[20px] font-bold text-primary">Ishita's Dental</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="services.html">Services</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="gallery.html">Smile Gallery</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="about.html">About Us</a>
+                <a class="text-secondary text-sm font-bold transition-colors" href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="contact.html"
+                    class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2.5 rounded-32 text-sm font-bold hover:scale-95 transition-transform duration-200 inline-block text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-primary p-2 focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-[32px] block">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu"
+        class="hidden lg:hidden fixed top-[65px] left-0 right-0 bg-white border-b border-border-light shadow-lg z-40 transition-all duration-300">
+        <div class="flex flex-col p-6 gap-4 font-headline font-bold">
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="index.html">Home</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="services.html">Services</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="gallery.html">Smile Gallery</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="about.html">About Us</a>
+            <a class="text-secondary text-base py-2 border-b border-gray-100" href="contact.html">Contact</a>
+            <a class="bg-primary text-on-primary text-center py-3 rounded-32 text-sm font-bold mt-2"
+                href="contact.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <main class="pt-12 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-[1440px] mx-auto px-container-padding mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-end">
+                <div>
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-bold text-label-bold mb-6">CONNECT
+                        WITH US</span>
+                    <h1
+                        class="font-headline text-[32px] md:text-[48px] lg:text-[64px] font-bold text-primary mb-8 max-w-xl leading-tight">
+                        Let's craft your perfect smile.</h1>
+                    <p class="font-body-lg text-body-lg text-text-secondary max-w-md leading-relaxed">
+                        Experience world-class dental care in the heart of South Bopal. We're here to answer your
+                        questions and welcome you to our family.
+                    </p>
+                </div>
+                <div class="hidden lg:flex justify-end">
+                    <div class="relative w-full h-[400px] rounded-32 overflow-hidden scandi-card">
+                        <img class="w-full h-full object-cover" data-alt="Serene clinic lobby"
+                            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Info Panel -->
+                <div id="contact-details-container" class="lg:col-span-5 flex flex-col gap-8">
+                    <!-- WhatsApp CTA (Moved to top) -->
+                    <div
+                        class="scroll-anim order-1 contact-highlight-target bg-secondary-container p-card-padding rounded-32 flex flex-col md:flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center justify-between gap-6 transition-all duration-300">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-14 h-14 rounded-full bg-white flex items-center justify-center shrink-0 text-secondary">
+                                <img src="whatsapp.png" alt="WhatsApp" class="w-8 h-8 object-contain">
+                            </div>
+                            <div>
+                                <h3 class="font-headline text-[24px] text-on-secondary-container font-bold">Quick Chat
+                                </h3>
+                                <p class="font-body-md text-on-secondary-container/70">Connect on WhatsApp for instant
+                                    booking</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/919054175521" target="_blank"
+                            class="bg-primary text-on-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all w-full md:w-auto lg:w-full xl:w-auto text-center inline-block">
+                            Chat Now
+                        </a>
+                    </div>
+
+                    <!-- Interactive Google Map (colourful only on mobile, order-2 on mobile, lg:order-3 on desktop) -->
+                    <div
+                        class="scroll-anim order-2 lg:order-3 rounded-32 overflow-hidden h-64 border border-border-light md:grayscale md:hover:grayscale-0 transition-all duration-700 shadow-sm">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Dr.+Ishita's+Dental+Clinic,+Safal+Parisar+Road,+South+Bopal,+Ahmedabad&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Contact Channels (order-3 on mobile, lg:order-2 on desktop) -->
+                    <div class="order-3 lg:order-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6">
+                        <div
+                            class="scroll-anim contact-highlight-target scandi-card p-6 md:p-8 rounded-32 flex md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-center xl:items-start gap-5 md:gap-0 lg:gap-5 xl:gap-0 group hover:bg-primary transition-all duration-150 cursor-pointer">
+                            <span
+                                class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed md:mb-4 lg:mb-0 xl:mb-4 text-[32px] transition-colors duration-150">call</span>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold group-hover:text-white mb-1">Phone</h4>
+                                <p class="font-body-md text-body-md text-text-secondary group-hover:text-white/80">+91
+                                    90541 75521</p>
+                            </div>
+                        </div>
+                        <div
+                            class="scroll-anim contact-highlight-target scandi-card p-6 md:p-8 rounded-32 flex md:flex-col lg:flex-row xl:flex-col items-center md:items-start lg:items-center xl:items-start gap-5 md:gap-0 lg:gap-5 xl:gap-0 group hover:bg-primary transition-all duration-150 cursor-pointer">
+                            <span
+                                class="material-symbols-outlined text-secondary group-hover:text-secondary-fixed md:mb-4 lg:mb-0 xl:mb-4 text-[32px] transition-colors duration-150">mail</span>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold group-hover:text-white mb-1">Email</h4>
+                                <p
+                                    class="font-body-md text-body-md text-text-secondary group-hover:text-white/80 break-all md:break-normal lg:break-all xl:break-normal">
+                                    hello@ishitadental.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Booking Form -->
+                <div class="lg:col-span-7">
+                    <div class="scroll-anim scandi-card p-card-padding rounded-32">
+                        <div class="mb-10">
+                            <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg mb-4">Book an
+                                Appointment</h2>
+                            <p class="font-body-md text-text-secondary">Please fill in your details and preferred time.
+                                Our team will contact you to confirm.</p>
+                        </div>
+                        <form class="space-y-6" id="appointment-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-bold text-label-bold text-primary px-1">Full Name</label>
+                                    <input
+                                        class="w-full bg-surface border-none rounded-xl p-4 font-body-md focus:ring-2 focus:ring-secondary-container transition-all input-glow"
+                                        placeholder="John Doe" type="text" name="full_name" required>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-bold text-label-bold text-primary px-1">Phone
+                                        Number</label>
+                                    <div
+                                        class="flex bg-surface border-none rounded-xl focus-within:ring-2 focus-within:ring-secondary-container transition-all overflow-hidden input-glow">
+                                        <span
+                                            class="flex items-center pl-4 pr-2 text-text-secondary font-bold border-r border-border-light text-sm select-none">+91</span>
+                                        <input
+                                            class="w-full bg-transparent border-none p-4 pl-2 font-body-md focus:ring-0 focus:outline-none"
+                                            placeholder="10-digit Phone" type="tel" name="phone_number"
+                                            pattern="[0-9]{10}" maxlength="10" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-bold text-label-bold text-primary px-1">Service Type</label>
+                                <select
+                                    class="w-full bg-surface border-none rounded-xl p-4 font-body-md focus:ring-2 focus:ring-secondary-container transition-all input-glow"
+                                    name="service_type" required>
+                                    <option value="">Select Treatment</option>
+                                    <option>Consultation / General Checkup</option>
+                                    <option>Dental Implants</option>
+                                    <option>Smile Designing</option>
+                                    <option>Root Canal Therapy</option>
+                                    <option>Teeth Whitening</option>
+                                    <option>Emergency Care</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-bold text-label-bold text-primary px-1">Preferred
+                                        Date</label>
+                                    <div class="relative w-full">
+                                        <input
+                                            class="w-full bg-surface border-none rounded-xl p-4 pr-12 font-body-md focus:ring-2 focus:ring-secondary-container transition-all input-glow"
+                                            type="date" name="preferred_date" required
+                                            style="color-scheme: light; min-height: 56px;">
+                                        <div
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant/70">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-bold text-label-bold text-primary px-1">Preferred
+                                        Time</label>
+                                    <select
+                                        class="w-full bg-surface border-none rounded-xl p-4 font-body-md focus:ring-2 focus:ring-secondary-container transition-all input-glow"
+                                        name="preferred_time_slot" required>
+                                        <option value="">Select Time Slot</option>
+                                        <option>Morning (10:00 AM - 1:00 PM)</option>
+                                        <option>Evening (5:00 PM - 8:00 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-bold text-label-bold text-primary px-1">Message
+                                    (Optional)</label>
+                                <textarea
+                                    class="w-full bg-surface border-none rounded-xl p-4 font-body-md focus:ring-2 focus:ring-secondary-container transition-all input-glow"
+                                    placeholder="Tell us about your dental concerns..." name="message"
+                                    rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary text-on-primary py-6 rounded-32 font-headline text-[20px] font-bold hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                                type="submit">
+                                Confirm Booking Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full rounded-t-[32px] border-t border-border-light mt-20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1440px] mx-auto px-container-padding py-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="logo.png" alt="Ishita's Dental Logo" class="h-12 w-12 object-contain">
+                    <span class="font-headline text-[24px] font-bold text-primary">Ishita's Dental</span>
+                </a>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Pioneering clinical luxury and pain-free
+                    dentistry in the heart of Ahmedabad. Your health is our priority.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Treatments</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Dental
+                            Implants</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Smile
+                            Designing</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Invisible
+                            Aligners</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Root Canal
+                            Therapy</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html">Our Story</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html#doctors">Meet Our
+                            Doctors</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="gallery.html">Smile Gallery</a>
+                    </li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="contact.html#info">Contact
+                            Us</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="admin-login.html">Doctor
+                            Portal</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Contact Us</h5>
+                <div class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <p class="">Shivalik Platinum, 1st Floor, South Bopal Cross Road, Ahmedabad.</p>
+                    <p class="">+91 90541 75521</p>
+                    <p class="">care@ishitadental.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-surface-container-high py-8 text-center text-on-surface-variant text-sm">
+            <p class="">© 2024 Dr. Ishita's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase Client
+        const supabaseUrl = 'https://zisyxbmrxzlkwsgfqzex.supabase.co';
+        const supabaseKey = 'sb_publishable_yslfiwQ1nQgpq1AqG5Bkog_YLZha0KF';
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Micro-interaction for form labels
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            const label = input.parentElement.querySelector('label');
+            if (label) {
+                input.addEventListener('focus', () => {
+                    label.classList.add('text-secondary');
+                });
+                input.addEventListener('blur', () => {
+                    label.classList.remove('text-secondary');
+                });
+            }
+        });
+
+        // Form Submission Feedback & Dynamic Time Slot Management
+        function initAppointmentForm() {
+            const form = document.getElementById('appointment-form');
+            if (!form) return;
+
+            const dateInput = form.querySelector('[name="preferred_date"]');
+            const timeSelect = form.querySelector('[name="preferred_time_slot"]');
+
+            // Set min date to today's date
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            const todayStr = `${yyyy}-${mm}-${dd}`;
+
+            // Helper to find the next available clinic opening date (not Sunday, and not today after 8 PM)
+            function getNextAvailableDate() {
+                let tempDate = new Date();
+                for (let i = 0; i < 7; i++) {
+                    const y = tempDate.getFullYear();
+                    const m = String(tempDate.getMonth() + 1).padStart(2, '0');
+                    const d = String(tempDate.getDate()).padStart(2, '0');
+                    const tempStr = `${y}-${m}-${d}`;
+
+                    const dayOfWeek = tempDate.getDay();
+
+                    // Sunday is closed
+                    if (dayOfWeek === 0) {
+                        tempDate.setDate(tempDate.getDate() + 1);
+                        continue;
+                    }
+
+                    // If it is today and past 8:00 PM (20:00), we are closed for today
+                    if (tempStr === todayStr) {
+                        const currentHour = new Date().getHours();
+                        if (currentHour >= 20) {
+                            tempDate.setDate(tempDate.getDate() + 1);
+                            continue;
+                        }
+                    }
+
+                    // Found a valid opening date
+                    return tempStr;
+                }
+                return todayStr; // Fallback
+            }
+
+            if (dateInput) {
+                dateInput.min = todayStr;
+                dateInput.value = getNextAvailableDate();
+            }
+
+            // Validate date selection (Closed on Sundays, Closed for today after 8:00 PM)
+            function validateDateSelection() {
+                if (!dateInput) return;
+                const selectedDate = dateInput.value;
+                if (!selectedDate) return;
+
+                // Split date parts to prevent timezone shifting (local date parsing)
+                const parts = selectedDate.split('-');
+                const dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+                const day = dateObj.getDay();
+
+                if (day === 0) { // Sunday is closed
+                    alert("We are closed on Sundays. Please select a date between Monday and Saturday.");
+                    dateInput.value = '';
+                    return;
+                }
+
+                if (selectedDate === todayStr) {
+                    const currentHour = new Date().getHours();
+                    if (currentHour >= 20) { // 8:00 PM is closed
+                        alert("The clinic is closed for today. Please select a future date for your appointment.");
+                        dateInput.value = '';
+                        return;
+                    }
+                }
+            }
+
+            // Enforce time slot limits for today's booking
+            function updateTimeSlots() {
+                if (!dateInput || !timeSelect) return;
+                const selectedDate = dateInput.value;
+                const morningOption = timeSelect.querySelector('option[value="Morning (10:00 AM - 1:00 PM)"]') || [...timeSelect.options].find(o => o.text.includes('Morning'));
+
+                if (selectedDate === todayStr) {
+                    const currentHour = new Date().getHours();
+                    // If it's past 1:00 PM (13:00), morning slot is closed for today
+                    if (currentHour >= 13) {
+                        if (morningOption) {
+                            morningOption.disabled = true;
+                            morningOption.style.display = 'none';
+                        }
+                        // Auto-set value to Evening if Morning was selected
+                        if (timeSelect.value.toLowerCase().includes('morning') || timeSelect.value === '') {
+                            timeSelect.value = 'Evening (5:00 PM - 8:00 PM)';
+                        }
+                    }
+                } else {
+                    // Enable Morning option for future dates
+                    if (morningOption) {
+                        morningOption.disabled = false;
+                        morningOption.style.display = 'block';
+                    }
+                }
+            }
+
+            if (dateInput) {
+                dateInput.addEventListener('change', () => {
+                    validateDateSelection();
+                    updateTimeSlots();
+                });
+                // Run on load
+                validateDateSelection();
+                updateTimeSlots();
+            }
+
+            // Modal handler helpers
+            const modal = document.getElementById('booking-modal');
+            const modalContent = document.getElementById('booking-modal-content');
+
+            function openModal(details) {
+                if (!modal) return;
+
+                // Safe selector update helper to prevent crash on any missing elements
+                const setVal = (id, val) => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = val || '-';
+                };
+
+                // Format date nicely
+                let formattedDate = details.preferred_date;
+                if (details.preferred_date) {
+                    try {
+                        const parts = details.preferred_date.split('-');
+                        const dateObj = new Date(parts[0], parts[1] - 1, parts[2]);
+                        formattedDate = dateObj.toLocaleDateString('en-IN', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                        });
+                    } catch (e) {
+                        console.error('Date parsing failed:', e);
+                    }
+                }
+
+                setVal('receipt-id', 'IDC-' + (details.id || ''));
+                setVal('receipt-name', details.full_name);
+                setVal('receipt-phone', details.phone_number);
+                setVal('receipt-service', details.service_type);
+                setVal('receipt-date', formattedDate);
+                setVal('receipt-time', details.preferred_time_slot);
+                setVal('receipt-message', details.message || 'None');
+
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    if (modalContent) modalContent.classList.remove('scale-95');
+                }, 10);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.add('opacity-0');
+                if (modalContent) modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            // Close events
+            document.getElementById('close-modal-btn')?.addEventListener('click', closeModal);
+            document.getElementById('ok-modal-btn')?.addEventListener('click', closeModal);
+            document.getElementById('print-modal-btn')?.addEventListener('click', () => {
+                window.print();
+            });
+
+            // Phone confirmation modal logic helpers
+            let pendingPayload = null;
+            const phoneConfirmModal = document.getElementById('phone-confirm-modal');
+            const phoneConfirmModalContent = document.getElementById('phone-confirm-modal-content');
+            const confirmPhoneDisplay = document.getElementById('confirm-phone-display');
+
+            function openPhoneConfirm(phoneVal, payload) {
+                if (!phoneConfirmModal) return;
+                pendingPayload = payload;
+
+                // Format phone nicely: e.g. +91 90541 75521
+                const formattedDisplay = '+91 ' + phoneVal.slice(0, 5) + ' ' + phoneVal.slice(5);
+                confirmPhoneDisplay.textContent = formattedDisplay;
+
+                phoneConfirmModal.classList.remove('hidden');
+                setTimeout(() => {
+                    phoneConfirmModal.classList.remove('opacity-0');
+                    if (phoneConfirmModalContent) phoneConfirmModalContent.classList.remove('scale-95');
+                }, 10);
+            }
+
+            function closePhoneConfirm() {
+                if (!phoneConfirmModal) return;
+                phoneConfirmModal.classList.add('opacity-0');
+                if (phoneConfirmModalContent) phoneConfirmModalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    phoneConfirmModal.classList.add('hidden');
+                    pendingPayload = null;
+                }, 300);
+            }
+
+            // Close/Edit phone click handler
+            document.getElementById('phone-edit-btn')?.addEventListener('click', () => {
+                closePhoneConfirm();
+                const phoneInput = form.querySelector('[name="phone_number"]');
+                if (phoneInput) {
+                    phoneInput.focus();
+                    phoneInput.select();
+                }
+            });
+
+            // Yes, Correct phone click handler -> Proceed with insert
+            document.getElementById('phone-proceed-btn')?.addEventListener('click', async () => {
+                if (!pendingPayload) return;
+
+                // Capture a local copy of payload before closing confirm modal (which asynchronously clears pendingPayload)
+                const payloadCopy = { ...pendingPayload };
+                closePhoneConfirm();
+
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerText;
+                btn.innerText = 'Sending Request...';
+                btn.disabled = true;
+
+                // Generate booking reference ID client-side
+                const generatedBookingId = Math.floor(100000 + Math.random() * 900000);
+
+                try {
+                    // Insert into Supabase (pure write-only insert to comply with RLS)
+                    const { error } = await supabaseClient
+                        .from('appointments')
+                        .insert([payloadCopy]);
+
+                    if (error) throw error;
+
+                    // Success UI transition
+                    btn.innerText = 'Appointment Requested!';
+                    btn.classList.add('bg-secondary', 'text-white');
+
+                    // Open confirmation modal
+                    openModal({
+                        id: generatedBookingId,
+                        ...payloadCopy
+                    });
+
+                    form.reset();
+                    updateTimeSlots();
+                } catch (err) {
+                    console.error('Supabase Error:', err);
+                    alert('Supabase Submission Error:\n' + (err.message || JSON.stringify(err)));
+                    btn.innerText = 'Error! Try Again';
+                    btn.classList.add('bg-red-500', 'text-white');
+                } finally {
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.remove('bg-secondary', 'text-white', 'bg-red-500');
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+
+            // Form Submit intercept
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+                const rawPhone = payload.phone_number;
+
+                // Format phone number with +91 prefix
+                payload.phone_number = '+91 ' + rawPhone;
+
+                // Open phone confirm dialog
+                openPhoneConfirm(rawPhone, payload);
+            });
+        }
+
+
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    const toggleIcon = toggleBtn.querySelector('span');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'close';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    }
+                });
+
+                // Close menu when clicking any link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const toggleIcon = toggleBtn.querySelector('span');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    });
+                });
+            }
+        }
+
+
+
+        // Check for hash or query param to scroll and highlight contact details
+        function checkContactHighlight() {
+            if (window.location.hash === '#info' || window.location.search.includes('scroll=info')) {
+                const container = document.getElementById('contact-details-container');
+                if (container) {
+                    // Scroll to container smoothly, offset for navbar
+                    const navbarHeight = 80;
+                    const topOffset = container.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                    window.scrollTo({
+                        top: topOffset,
+                        behavior: 'smooth'
+                    });
+
+                    // Add highlight class to children targets
+                    const targets = document.querySelectorAll('.contact-highlight-target');
+                    targets.forEach((target, index) => {
+                        // Stagger the highlight trigger slightly for premium feel!
+                        setTimeout(() => {
+                            target.classList.add('highlight-active');
+                        }, index * 150);
+
+                        // Remove highlight class after animation finishes
+                        setTimeout(() => {
+                            target.classList.remove('highlight-active');
+                        }, 5000);
+                    });
+                }
+            }
+        }
+
+        // Scroll Fade-in Animations
+        function initScrollAnims() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        setTimeout(() => {
+                            entry.target.classList.remove('duration-700');
+                        }, 700);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-anim').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileMenu();
+            checkContactHighlight();
+            initAppointmentForm();
+            initScrollAnims();
+
+            // Listen for hashchange in case the user navigates while already on the page
+            window.addEventListener('hashchange', checkContactHighlight);
+        });
+    </script>
+    <!-- Booking Success Modal -->
+    <div id="booking-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-3xl rounded-[32px] scandi-shadow border border-border-light relative mx-4 transform scale-95 transition-transform duration-300 flex flex-col max-h-[90vh] overflow-hidden"
+            id="booking-modal-content">
+
+            <!-- Top Bar Warning Banner (Highly Prominent) -->
+            <div class="bg-amber-500/10 border-b border-amber-500/20 p-5 pr-14 flex items-center gap-3.5 shrink-0">
+                <span class="material-symbols-outlined text-amber-600 shrink-0 text-[22px]">info</span>
+                <p class="text-xs md:text-sm font-bold text-slate-800 leading-relaxed">
+                    We will review your request and contact you on the number provided shortly to confirm your exact
+                    appointment timing.
+                </p>
+            </div>
+
+            <!-- Close Button (Positioned over Top Bar) -->
+            <button id="close-modal-btn"
+                class="absolute top-3.5 right-4 w-9 h-9 rounded-full bg-slate-800/5 hover:bg-slate-800/10 flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-primary text-[20px]">close</span>
+            </button>
+
+            <!-- Split Grid Content (Scrollable Container) -->
+            <div class="p-8 md:p-10 overflow-y-auto custom-scrollbar flex flex-col md:flex-row gap-8 items-stretch">
+
+                <!-- Left Side: Status Header (38% Width) -->
+                <div
+                    class="md:w-[38%] flex flex-col gap-4 justify-center items-center md:items-start text-center md:text-left shrink-0">
+                    <div
+                        class="w-16 h-16 bg-emerald-500/10 text-emerald-600 rounded-full flex items-center justify-center mb-1">
+                        <span class="material-symbols-outlined text-4xl">check_circle</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold text-primary">Appointment Requested!</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">
+                        Your request has been securely submitted. Please review your confirmation receipt.
+                    </p>
+                </div>
+
+                <!-- Vertical Divider -->
+                <div class="hidden md:block w-[1px] bg-border-light"></div>
+
+                <!-- Right Side: Details Receipt (62% Width) -->
+                <div class="flex-grow flex flex-col justify-between gap-6">
+                    <!-- Receipt Details -->
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Booking ID</span>
+                            <span class="font-bold text-primary" id="receipt-id">IDC-100000</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Patient Name</span>
+                            <span class="font-semibold text-primary" id="receipt-name">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Phone Number</span>
+                            <span class="font-semibold text-primary" id="receipt-phone">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Treatment</span>
+                            <span class="font-semibold text-primary" id="receipt-service">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Preferred Date</span>
+                            <span class="font-semibold text-primary" id="receipt-date">-</span>
+                        </div>
+                        <div class="flex justify-between border-b border-border-light/50 pb-2">
+                            <span class="text-on-surface-variant font-medium">Time Slot</span>
+                            <span class="font-semibold text-primary" id="receipt-time">-</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-on-surface-variant font-medium">Message (Optional)</span>
+                            <p class="text-on-surface-variant bg-surface-container rounded-2xl p-3 text-xs italic"
+                                id="receipt-message">None</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-4">
+                        <button id="print-modal-btn"
+                            class="flex-1 bg-surface-container hover:bg-secondary-container text-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-colors">
+                            <span class="material-symbols-outlined text-[18px]">print</span> Print Details
+                        </button>
+                        <button id="ok-modal-btn"
+                            class="flex-1 bg-primary text-on-primary py-4 rounded-2xl font-bold hover:scale-[0.98] transition-all">
+                            Close Window
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Phone Number Confirmation Modal -->
+    <div id="phone-confirm-modal"
+        class="fixed inset-0 z-[110] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-md rounded-[32px] p-8 scandi-shadow border border-border-light relative mx-4 transform scale-95 transition-transform duration-300 flex flex-col gap-6"
+            id="phone-confirm-modal-content">
+            <div class="text-center">
+                <div
+                    class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-2xl">contact_phone</span>
+                </div>
+                <h3 class="font-headline text-lg font-bold text-primary">Is this your correct phone number?</h3>
+                <p class="text-on-surface-variant text-sm mt-2 leading-relaxed">
+                    We'll call or message you on this number to confirm your appointment time. Please make sure it's
+                    correct.
+                </p>
+                <div class="my-6 py-4 px-6 bg-slate-50 border border-border-light rounded-2xl text-2xl font-bold text-primary tracking-wide"
+                    id="confirm-phone-display">
+                    +91 90541 75521
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <button id="phone-edit-btn"
+                    class="flex-1 bg-surface-container-low hover:bg-slate-100 text-primary py-4 rounded-2xl font-bold text-sm transition-colors border border-border-light">
+                    Edit Number
+                </button>
+                <button id="phone-proceed-btn"
+                    class="flex-1 bg-secondary hover:bg-secondary/90 text-white py-4 rounded-2xl font-bold text-sm transition-colors shadow-sm">
+                    Yes, It's Correct
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

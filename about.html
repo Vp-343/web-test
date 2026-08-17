@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About Us | Dr. Ishita's Dental Clinic</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&amp;family=Manrope:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary": "#ffffff",
+                            "border-light": "#E8ECEF",
+                            "surface-container": "#eceeef",
+                            "tertiary-fixed": "#a6eeff",
+                            "on-secondary": "#ffffff",
+                            "inverse-primary": "#bfc9be",
+                            "on-background": "#191c1d",
+                            "on-surface-variant": "#444843",
+                            "on-primary-container": "#7c867d",
+                            "on-secondary-fixed-variant": "#004e59",
+                            "tertiary-fixed-dim": "#76d4e9",
+                            "surface-container-low": "#f2f4f5",
+                            "secondary": "#216772",
+                            "on-primary": "#ffffff",
+                            "background": "#f8fafb",
+                            "surface-bright": "#f8fafb",
+                            "error": "#ba1a1a",
+                            "on-tertiary-container": "#2490a3",
+                            "on-primary-fixed-variant": "#3f4941",
+                            "on-surface": "#191c1d",
+                            "surface-container-highest": "#e1e3e4",
+                            "error-container": "#ffdad6",
+                            "secondary-fixed": "#acedfa",
+                            "primary": "#000000",
+                            "on-error": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "surface-dim": "#d8dadb",
+                            "on-secondary-container": "#266b77",
+                            "inverse-surface": "#2e3132",
+                            "background-pure": "#FFFFFF",
+                            "surface-container-high": "#e6e8e9",
+                            "secondary-container": "#a9eaf7",
+                            "primary-container": "#151e17",
+                            "on-tertiary-fixed": "#001f25",
+                            "on-primary-fixed": "#151e17",
+                            "tertiary": "#000000",
+                            "outline-variant": "#c4c8c1",
+                            "outline": "#747873",
+                            "on-secondary-fixed": "#001f24",
+                            "surface-variant": "#e1e3e4",
+                            "on-tertiary-fixed-variant": "#004e5b",
+                            "primary-fixed": "#dbe5da",
+                            "text-secondary": "#5E6468",
+                            "primary-fixed-dim": "#bfc9be",
+                            "text-primary": "#111111"
+                        },
+                        "fontFamily": {
+                            "headline": ["Unbounded", "sans-serif"],
+                            "body": ["Manrope", "sans-serif"]
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px",
+                            "32": "32px"
+                        },
+                        "spacing": {
+                            "section-gap": "8rem",
+                            "mobile-margin": "1.25rem",
+                            "card-padding": "2.5rem",
+                            "container-padding": "4rem",
+                            "gutter": "1.5rem"
+                        },
+                        "fontSize": {
+                            "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                            "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "display-xl": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "label-bold": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                        }
+                    },
+                }
+            }
+        } catch (_e) { }
+    </script>
+    <style>
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94A3B8;
+            border-radius: 5px;
+            border: 2px solid #f8fafb;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #216772;
+        }
+
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #94A3B8 #f8fafb;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .shadow-soft {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .profile-card-shadow {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (max-width: 1100px) {
+            .philosophy-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .px-container-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden pt-16">
+
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto px-container-padding py-3 transition-all duration-300">
+            <a class="flex items-center gap-2" href="index.html">
+                <img src="logo.png" alt="Ishita's Dental Logo" class="h-10 w-10 object-contain">
+                <span class="font-headline text-[20px] font-bold text-primary">Ishita's Dental</span>
+            </a>
+            <div class="hidden lg:flex gap-6 items-center">
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="services.html">Services</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="gallery.html">Smile Gallery</a>
+                <a class="text-secondary text-sm font-bold transition-colors" href="about.html">About Us</a>
+                <a class="text-on-surface-variant text-sm font-bold hover:text-secondary transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+
+                <a href="contact.html"
+                    class="hidden sm:inline-block bg-primary text-on-primary px-6 py-2.5 rounded-32 text-sm font-bold hover:scale-95 transition-transform duration-200 inline-block text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-primary p-2 focus:outline-none"
+                    aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined text-[32px] block">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu"
+        class="hidden lg:hidden fixed top-[65px] left-0 right-0 bg-white border-b border-border-light shadow-lg z-40 transition-all duration-300">
+        <div class="flex flex-col p-6 gap-4 font-headline font-bold">
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="index.html">Home</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="services.html">Services</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="gallery.html">Smile Gallery</a>
+            <a class="text-secondary text-base py-2 border-b border-gray-100" href="about.html">About Us</a>
+            <a class="text-on-surface-variant text-base hover:text-secondary py-2 border-b border-gray-100 transition-colors"
+                href="contact.html">Contact</a>
+            <a class="bg-primary text-on-primary text-center py-3 rounded-32 text-sm font-bold mt-2"
+                href="contact.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- 1. Hero Section -->
+    <header class="relative w-full min-h-[80vh] flex items-center justify-start overflow-hidden py-20 md:py-32">
+        <div class="absolute inset-0 z-0">
+            <img alt="Modern, tranquil dental clinic interior"
+                class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/55 to-black/30 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="relative z-10 max-w-[1440px] mx-auto px-container-padding w-full">
+            <div class="max-w-3xl animate-fade-in">
+                <span
+                    class="inline-block font-label-bold text-label-bold text-secondary-container bg-primary/20 px-4 py-2 rounded-full mb-6 backdrop-blur-md">SINCE
+                    2012</span>
+                <h1
+                    class="font-headline text-[32px] md:text-[48px] lg:text-[64px] font-bold text-white mb-8 leading-tight">
+                    A Decade of Compassionate <br class="hidden md:block"> Dental Excellence
+                </h1>
+                <p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-xl leading-relaxed">
+                    Under the expert guidance of Dr. Ishita, we combine Scandinavian precision with personalized warmth
+                    to transform the way you experience dental care.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#story"
+                        class="w-full sm:w-auto bg-secondary-container text-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all shadow-soft inline-block text-center">
+                        Discover Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Legacy & Philosophy -->
+    <section id="story" class="py-section-gap px-container-padding max-w-[1440px] mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-7 space-y-8">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary">A Legacy Built on
+                    Trust in South Bopal</h2>
+                <div class="space-y-6">
+                    <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">
+                        For over 12 years, Dr. Ishita's Dental Clinic has been a cornerstone of health in Ahmedabad.
+                        What started as a vision for comfortable, high-tech dentistry has evolved into one of South
+                        Bopal's most trusted practices.
+                    </p>
+                    <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">
+                        Our journey is defined by more than just successful treatments; it’s about the relationships
+                        we’ve built. We believe that a trip to the dentist should feel like a retreat, not a chore.
+                        That’s why we’ve invested in a space that breathes tranquility and technology in equal measure.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-6">
+                        <div class="border-l-4 border-secondary pl-6">
+                            <span class="block font-headline text-headline-md text-primary">12+</span>
+                            <span
+                                class="font-label-bold text-label-bold text-text-secondary uppercase tracking-widest">Years
+                                Experience</span>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-6">
+                            <span class="block font-headline text-headline-md text-primary">15k+</span>
+                            <span
+                                class="font-label-bold text-label-bold text-text-secondary uppercase tracking-widest">Smiling
+                                Patients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 rounded-32 overflow-hidden shadow-soft aspect-[4/5] bg-surface-container">
+                    <img class="w-full h-full object-cover" data-alt="A portrait of Dr. Ishita" src="IMG_6467-min.webp">
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Philosophy Section -->
+    <section class="bg-surface-container-low py-section-gap">
+        <div class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="text-center mb-20">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Our Core
+                    Philosophy</h2>
+                <p class="font-body-md text-body-md text-text-secondary max-w-2xl mx-auto">Precision in practice,
+                    compassion in care. Our values are the pillars of every patient interaction.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 philosophy-grid">
+                <!-- Card 1 -->
+                <div
+                    class="scroll-anim bg-white p-8 sm:p-10 rounded-32 shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-secondary-container/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-secondary text-3xl">volunteer_activism</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Patient-First Philosophy</h3>
+                    <p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                        We don't just treat teeth; we care for people. Every treatment plan is tailored to your unique
+                        comfort levels, anxieties, and lifestyle goals.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="scroll-anim bg-white p-8 sm:p-10 rounded-32 shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-secondary-container/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Clinical Precision</h3>
+                    <p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                        Excellence is non-negotiable. Using state-of-the-art diagnostic tools, we ensure every procedure
+                        is performed with microscopic accuracy.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="scroll-anim bg-white p-8 sm:p-10 rounded-32 shadow-soft hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 bg-secondary-container/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary-container transition-colors">
+                        <span class="material-symbols-outlined text-secondary text-3xl">visibility</span>
+                    </div>
+                    <h3 class="font-headline text-headline-md text-primary mb-4">Transparent Care</h3>
+                    <p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                        No hidden costs, no surprises. We provide detailed explanations and digital visual aids so you
+                        stay informed and empowered at every step.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 3. Meet Our Experts -->
+    <section id="doctors" class="py-section-gap overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="text-center mb-20">
+                <div
+                    class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-secondary-container/20 rounded-full text-secondary">
+                    <span class="material-symbols-outlined text-[18px]">clinical_notes</span>
+                    <span class="font-label-bold text-label-bold uppercase tracking-widest">Medical Excellence</span>
+                </div>
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Hands Behind
+                    Your Healthy Smile</h2>
+                <p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Our team of master clinicians combines Scandinavian precision with empathetic care to redefine the
+                    modern dental experience.
+                </p>
+            </div>
+            <!-- Dr. Ishita Parmar Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
+                <!-- Left: Portrait -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-secondary/10 rounded-[32px] translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
+                    </div>
+                    <div class="relative aspect-[4/5] rounded-[32px] overflow-hidden profile-card-shadow">
+                        <img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                            data-alt="A portrait of Dr. Ishita Parmar" src="IMG_6467-min.webp">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 hidden md:block">
+                        <div class="bg-white p-8 rounded-[32px] profile-card-shadow border border-border-light">
+                            <span class="font-display-xl text-[48px] text-secondary font-bold">12+</span>
+                            <p class="font-label-bold text-text-secondary uppercase">Years of Precision</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Content -->
+                <div class="flex flex-col gap-8">
+                    <div>
+                        <span
+                            class="text-secondary font-label-bold text-label-bold uppercase tracking-wider mb-4 block">Lead
+                            Clinician</span>
+                        <h3 class="font-headline text-headline-lg-mobile md:text-headline-lg mb-2 text-primary">Dr.
+                            Ishita Parmar</h3>
+                        <p class="text-text-secondary font-headline text-[24px]">Dental Surgeon &amp; Endodontist</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-6 bg-white rounded-[24px] border border-border-light shadow-sm">
+                            <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined text-secondary">school</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold text-primary mb-1">Qualifications</h4>
+                                <p class="text-text-secondary">BDS, MDS (Endodontics &amp; Conservative Dentistry)</p>
+                            </div>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">
+                            Dr. Ishita Parmar brings a refined clinical perspective to cosmetic and restorative
+                            dentistry. Her philosophy is rooted in the belief that oral health is the cornerstone of
+                            systemic well-being. With a focus on minimally invasive techniques, she ensures that every
+                            treatment is as tranquil as it is effective.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-secondary-container/10 p-4 rounded-xl border border-secondary/5 text-center">
+                                <span class="font-label-bold text-secondary text-sm">Cosmetic Artistry</span>
+                            </div>
+                            <div class="bg-secondary-container/10 p-4 rounded-xl border border-secondary/5 text-center">
+                                <span class="font-label-bold text-secondary text-sm">Surgical Precision</span>
+                            </div>
+                            <div class="bg-secondary-container/10 p-4 rounded-xl border border-secondary/5 text-center">
+                                <span class="font-label-bold text-secondary text-sm">Holistic Approach</span>
+                            </div>
+                            <div class="bg-secondary-container/10 p-4 rounded-xl border border-secondary/5 text-center">
+                                <span class="font-label-bold text-secondary text-sm">Patient Comfort</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dr. C. Parmar Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <!-- Left: Content -->
+                <div class="flex flex-col gap-8 lg:order-1 order-2">
+                    <div>
+                        <span
+                            class="text-secondary font-label-bold text-label-bold uppercase tracking-wider mb-4 block">Senior
+                            Specialist</span>
+                        <h3 class="font-headline text-headline-lg-mobile md:text-headline-lg mb-2 text-primary">Dr. C.
+                            Parmar</h3>
+                        <p class="text-text-secondary font-headline text-[24px]">Dental Surgeon</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-6 bg-white rounded-[24px] border border-border-light shadow-sm">
+                            <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center">
+                                <span class="material-symbols-outlined text-secondary">verified</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold text-primary mb-1">Focus Areas</h4>
+                                <p class="text-text-secondary">Advanced Implantology &amp; General Dentistry</p>
+                            </div>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">
+                            Dr. C. Parmar is renowned for his technical mastery in general dental care. His approach
+                            blends decades of clinical wisdom with the latest advancements in digital dentistry. He is
+                            dedicated to restoring not just the function of a smile, but the confidence that comes with
+                            it.
+                        </p>
+                        <blockquote
+                            class="border-l-4 border-secondary pl-6 py-2 italic text-text-secondary font-body-lg">
+                            "Our mission is to create a clinical environment so serene that our patients forget they are
+                            at the dentist."
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Right: Portrait -->
+                <div class="relative group lg:order-2 order-1">
+                    <div
+                        class="absolute inset-0 bg-primary/5 rounded-[32px] -translate-x-4 translate-y-4 -z-10 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2">
+                    </div>
+                    <div class="relative aspect-[4/5] rounded-[32px] overflow-hidden profile-card-shadow">
+                        <img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                            data-alt="A portrait of Dr. C. Parmar" src="IMG_6468-min.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Technology & Comfort Section -->
+    <section class="py-section-gap bg-surface-container-low">
+        <div class="max-w-[1440px] mx-auto px-container-padding">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="aspect-square rounded-32 overflow-hidden shadow-soft">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Dentist showing a 3D digital teeth scan on a tablet screen"
+                                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80">
+                        </div>
+                        <div class="aspect-square rounded-32 overflow-hidden shadow-soft mt-8">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Modern high-tech dental clinic room with scanner equipment and dental chair"
+                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80">
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <span class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">Modern
+                        Equipment</span>
+                    <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-primary">The Future of
+                        Dental Comfort is Digital</h2>
+                    <p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">
+                        We invest in the latest global dental technologies to ensure your treatments are faster, safer,
+                        and virtually painless. From low-radiation digital X-rays to advanced intraoral scanning, we
+                        eliminate the guesswork.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-primary font-bold">3D Digital Imaging &amp;
+                                Intraoral Scanners</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-primary font-bold">Pain-Free Computerized
+                                Anesthesia</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-primary font-bold">Laser Dentistry for Soft
+                                Tissue Care</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-section-gap px-gutter md:px-container-padding">
+        <div
+            class="max-w-[1440px] mx-auto bg-primary-container rounded-[48px] overflow-hidden relative p-12 md:p-24 text-center">
+            <div class="relative z-10 max-w-2xl mx-auto bg-primary-container/85 p-6 rounded-2xl">
+                <h2 class="font-headline text-headline-lg-mobile md:text-headline-lg text-white mb-8 leading-tight">
+                    <span class="lg:hidden">Ready for Better Care?</span>
+                    <span class="hidden lg:inline">Ready to experience <br> a different kind of dental care?</span>
+                </h2>
+                <p class="font-body-lg text-body-lg text-white/70 mb-12">Join thousands of families in Ahmedabad who
+                    trust us with their smiles. Book your first consultation today.</p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <a href="contact.html"
+                        class="w-full md:w-auto bg-secondary-container text-primary px-10 py-5 rounded-32 font-bold text-lg hover:scale-[1.02] transition-all shadow-soft inline-block text-center">
+                        Book Your Visit
+                    </a>
+                    <a href="contact.html#info"
+                        class="w-full md:w-auto bg-transparent border border-white/20 text-white px-10 py-5 rounded-32 font-bold text-lg hover:bg-white hover:text-primary transition-all inline-block text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest w-full rounded-t-[32px] border-t border-border-light mt-20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-[1440px] mx-auto px-container-padding py-20">
+            <div class="space-y-6">
+                <a class="flex items-center gap-2" href="index.html">
+                    <img src="logo.png" alt="Ishita's Dental Logo" class="h-12 w-12 object-contain">
+                    <span class="font-headline text-[24px] font-bold text-primary">Ishita's Dental</span>
+                </a>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Pioneering clinical luxury and pain-free
+                    dentistry in the heart of Ahmedabad. Your health is our priority.</p>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-secondary-container transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Treatments</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Dental
+                            Implants</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Smile
+                            Designing</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Invisible
+                            Aligners</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="services.html">Root Canal
+                            Therapy</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html">Our Story</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="about.html#doctors">Meet Our
+                            Doctors</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="gallery.html">Smile Gallery</a>
+                    </li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="contact.html#info">Contact
+                            Us</a></li>
+                    <li class=""><a class="hover:text-secondary transition-colors" href="admin-login.html">Doctor
+                            Portal</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="font-bold text-lg mb-6">Contact Us</h5>
+                <div class="space-y-4 text-on-surface-variant text-sm font-medium">
+                    <p class="">Shivalik Platinum, 1st Floor, South Bopal Cross Road, Ahmedabad.</p>
+                    <p class="">+91 90541 75521</p>
+                    <p class="">care@ishitadental.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-surface-container-high py-8 text-center text-on-surface-variant text-sm">
+            <p class="">© 2024 Dr. Ishita's Dental Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    const toggleIcon = toggleBtn.querySelector('span');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'close';
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    }
+                });
+
+                // Close menu when clicking any link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const toggleIcon = toggleBtn.querySelector('span');
+                        if (toggleIcon) toggleIcon.textContent = 'menu';
+                    });
+                });
+            }
+        }
+
+        // Scroll Fade-in Animations
+        function initScrollAnims() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        setTimeout(() => {
+                            entry.target.classList.remove('duration-700');
+                        }, 700);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-anim').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileMenu();
+            initScrollAnims();
+        });
+    </script>
+</body>
+
+</html>
